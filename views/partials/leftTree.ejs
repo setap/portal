@@ -1,0 +1,41 @@
+<div class="well sidebar-nav">
+    <ul class="nav nav-list">
+        <%for(var r in device.device){%>
+            <li id="<%=device.device[r][0].name%>"><label class="tree-toggle nav-header"><%=device.device[r][0].name%></label>
+                <%for(var a in device.device[r][0].area){%>
+                    <ul class="nav nav-list tree area">
+                        <li>
+                            <label style="display: inline;" class="tree-toggle nav-header area"><%=device.device[r][0].area[a].n%></label>
+                            <%if('ok' == 'ok'){%>
+                            <span class="badge"></span>
+                            <%}%>
+
+                            <%for(var l in device.device[r][0].area[a].l){%>
+                                <ul class="nav nav-list tree">
+                                    <li><label style="display: inline" class="tree-toggle nav-header location"><%=device.device[r][0].area[a].l[l].n%></label>
+                                        <%if('ok' == 'ok'){%>
+                                        <span class="badge badge-success"></span>
+                                        <%}%>
+
+                                        <%for(var d in device.device[r][0].area[a].l[l].h){%>
+                                            <ul class="nav nav-list tree" id="<%=device.device[r][0].area[a].l[l].h[d].n%>">
+                                                <li>
+                                                    <a style="display: inline" class="device" data-toggle="popover" data-placement="right"><%=device.device[r][0].area[a].l[l].h[d].n%></a>
+
+                                                        <%if("ok" == 'ok'){%>
+                                                            <span class="badge badge-success"></span>
+                                                        <%}%>
+
+                                                 </li>
+                                            </ul>
+                                        <%}%>
+                                   </li>
+                                </ul>
+                            <%}%>
+                        </li>
+                    </ul>
+                <%}%>
+            </li>
+        <%}%>
+    </ul>
+</div><!--/.well -->
