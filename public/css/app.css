@@ -31,3 +31,13 @@ body {
 .info{
     display: none;
 }
+
+.area{
+    display: none;
+}
+.location-tree{
+    display: none;
+}
+.device-tree{
+    display: none;
+}

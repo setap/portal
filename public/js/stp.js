@@ -1,3 +1,7 @@
+$(function (){
+    $("#example").popover();
+});
+
 
 $(document).ready(function() {
 
@@ -11,12 +15,6 @@ $(document).ready(function() {
     });
 });
 
-$(document).ready(function(){
-    $('ul li ul').hide();
-
-    $('ul li ul li ul').hide();
-
-});
 
 $('.device').popover(
 
@@ -25,10 +23,20 @@ $('.device').popover(
      html:true,
 
      content:function(){
-         var d = $(this).next().html();
-         return d;}
+         var d = null;
+
+         if ($(this).siblings().length == 3){
+             var d = $(this).next().next().next().html();
+         } else {
+             var d = $(this).next().next().html();
+         }
+
+         return d;
+     }
+
     }
 );
+
 
 var socket = io.connect();
 
@@ -72,9 +80,10 @@ socket.on('YFO', function(data){
 
     $('li#' + data.name + ' a.device').each(function() {
 
-        var count = findDevice(data, $(this).text());
+        var countFromDb = findDevice(data, $(this).text());
+        var countFromPage = $('span', $(this).parent()).text();
 
-        if(count != $(this).next().text()) {
+        if(countFromDb != countFromPage) {
 
             var message = '<div class="alert fade in"><button class="close" type="button" data-dismiss="alert">x</button><br>' +
                             '<strong>Новое событие на узле : </strong>' + $(this).text() +
@@ -82,10 +91,9 @@ socket.on('YFO', function(data){
                           '</div>';
             $('div.span7').prepend(message);
 
-//            $('p.infodevice').text($(this).text() + ' change to ' + $(this).next().text());
         }
 
-        $(this).next().text(count);
+        $('span', $(this).parent()).text(countFromDb);
 
     });
     
