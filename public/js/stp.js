@@ -1,287 +1,296 @@
-$(function (){
-    $("#example").popover();
-});
-
 
 $(document).ready(function() {
+  var collapseNode = [];
 
-    var collapseNode = [];
-
-    $('.tree-toggle').click(function () {
-
-        collapseNode.push();
-        $(this).parent().children('ul.tree').toggle(200);
-
-    });
+  $('.tree-toggle').click(function() {
+    collapseNode.push();
+    $(this).parent().children('ul.tree').toggle(200);
+  });
 });
 
-
 $('.device').popover(
+  { trigger:'hover',
+    placement:'right',
+    html:true,
 
-    {trigger:'hover',
-     placement:'right',
-     html:true,
+    content: function() {
+      var d = null;
 
-     content:function(){
-         var d = null;
+      d = $('div.info', $(this).parent()).html();
 
-         if ($(this).siblings().length == 3){
-             var d = $(this).next().next().next().html();
-         } else {
-             var d = $(this).next().next().html();
-         }
-
-         return d;
-     }
-
+      return d;
     }
+  }
 );
-
 
 var socket = io.connect();
 
 var t = 0;
 
-setInterval(function(){
-    t += 5;
-    $('div.bar').css('width', t + "px");
-}, 500)
+setInterval(function() {
+  t += 5;
+  $('div.bar').css('width', t + "px");
+}, 500);
 
-setInterval(function(){
+setInterval(function() {
+  socket.emit('YFO');
+  socket.emit('SFO');
+  socket.emit('UFO');
+  socket.emit('PFO');
+  socket.emit('SKFO');
+  socket.emit('CFO');
+  socket.emit('SZFO');
+  socket.emit('DFO');
+}, 10 * 1000);
 
-    socket.emit('YFO');
-    socket.emit('SFO');
-    socket.emit('UFO');
-    socket.emit('PFO');
-    socket.emit('SKFO');
-    socket.emit('CFO');
-    socket.emit('SZFO');
-    socket.emit('DFO');
+socket.on('YFO', function(data) {
+  var data = jQuery.parseJSON(data);
 
-}, 10*1000);
+  $('li#' + data.name + ' label.area').each(function() {
+    var countFromDb = findArea(data, $(this).text());
+    $(this).next().text(countFromDb);
+  });
 
-socket.on('YFO', function(data){
+  $('li#' + data.name + ' label.location').each(function() {
+    var countFromDb = findLocation(data, $(this).text());
+    $(this).next().text(countFromDb);
+  });
 
+  $('li#' + data.name + ' a.device').each(function() {
+    var countFromDb = findDevice(data, $(this).text());
+    var countFromPage = $('span', $(this).parent()).text();
+
+    if(countFromDb != countFromPage) {
+      var message = '<div class="alert fade in"><button class="close"' +
+                    'type="button" data-dismiss="alert">x</button><br>' +
+                    '<strong>Новое событие на узле : </strong>' + $(this).text() +
+                    '<p class="infodevice"></p></div>';
+
+      $('div.span7').prepend(message);
+    }
+      $('span', $(this).parent()).text(countFromDb);
+  });
+    
+  $('div.bar').css('width', "0px");
+  t = 0;
+});
+socket.on('SFO', function(data) {
     var data = jQuery.parseJSON(data);
 
     $('li#' + data.name + ' label.area').each(function() {
-
-        var count = findArea(data, $(this).text());
-        $(this).next().text(count);
-
+        var countFromDb = findArea(data, $(this).text());
+        $(this).next().text(countFromDb);
     });
 
     $('li#' + data.name + ' label.location').each(function() {
-
-        var count = findLocation(data, $(this).text());
-        $(this).next().text(count);
-
+        var countFromDb = findLocation(data, $(this).text());
+        $(this).next().text(countFromDb);
     });
 
     $('li#' + data.name + ' a.device').each(function() {
-
         var countFromDb = findDevice(data, $(this).text());
         var countFromPage = $('span', $(this).parent()).text();
 
         if(countFromDb != countFromPage) {
+            var message = '<div class="alert fade in"><button class="close"' +
+                'type="button" data-dismiss="alert">x</button><br>' +
+                '<strong>Новое событие на узле : </strong>' + $(this).text() +
+                '<p class="infodevice"></p></div>';
 
-            var message = '<div class="alert fade in"><button class="close" type="button" data-dismiss="alert">x</button><br>' +
-                            '<strong>Новое событие на узле : </strong>' + $(this).text() +
-                            '<p class="infodevice"></p>' +
-                          '</div>';
             $('div.span7').prepend(message);
-
         }
-
         $('span', $(this).parent()).text(countFromDb);
-
     });
-    
+
     $('div.bar').css('width', "0px");
     t = 0;
-})
-socket.on('SFO', function(data){
-
+});
+socket.on('UFO', function(data) {
     var data = jQuery.parseJSON(data);
 
     $('li#' + data.name + ' label.area').each(function() {
-
-        var count = findArea(data, $(this).text());
-        $(this).next().text(count);
-
+        var countFromDb = findArea(data, $(this).text());
+        $(this).next().text(countFromDb);
     });
 
     $('li#' + data.name + ' label.location').each(function() {
-
-        var count = findLocation(data, $(this).text());
-        $(this).next().text(count);
-
+        var countFromDb = findLocation(data, $(this).text());
+        $(this).next().text(countFromDb);
     });
 
     $('li#' + data.name + ' a.device').each(function() {
+        var countFromDb = findDevice(data, $(this).text());
+        var countFromPage = $('span', $(this).parent()).text();
 
-        var count = findDevice(data, $(this).text());
-        $(this).next().text(count);
+        if(countFromDb != countFromPage) {
+            var message = '<div class="alert fade in"><button class="close"' +
+                'type="button" data-dismiss="alert">x</button><br>' +
+                '<strong>Новое событие на узле : </strong>' + $(this).text() +
+                '<p class="infodevice"></p></div>';
 
+            $('div.span7').prepend(message);
+        }
+        $('span', $(this).parent()).text(countFromDb);
     });
 
-})
-socket.on('UFO', function(data){
-
+    $('div.bar').css('width', "0px");
+    t = 0;
+});
+socket.on('PFO', function(data) {
     var data = jQuery.parseJSON(data);
 
     $('li#' + data.name + ' label.area').each(function() {
-
-        var count = findArea(data, $(this).text());
-        $(this).next().text(count);
-
+        var countFromDb = findArea(data, $(this).text());
+        $(this).next().text(countFromDb);
     });
 
     $('li#' + data.name + ' label.location').each(function() {
-
-        var count = findLocation(data, $(this).text());
-        $(this).next().text(count);
-
+        var countFromDb = findLocation(data, $(this).text());
+        $(this).next().text(countFromDb);
     });
 
     $('li#' + data.name + ' a.device').each(function() {
+        var countFromDb = findDevice(data, $(this).text());
+        var countFromPage = $('span', $(this).parent()).text();
 
-        var count = findDevice(data, $(this).text());
-        $(this).next().text(count);
+        if(countFromDb != countFromPage) {
+            var message = '<div class="alert fade in"><button class="close"' +
+                'type="button" data-dismiss="alert">x</button><br>' +
+                '<strong>Новое событие на узле : </strong>' + $(this).text() +
+                '<p class="infodevice"></p></div>';
 
+            $('div.span7').prepend(message);
+        }
+        $('span', $(this).parent()).text(countFromDb);
     });
 
-})
-socket.on('PFO', function(data){
-
+    $('div.bar').css('width', "0px");
+    t = 0;
+});
+socket.on('SKFO', function(data) {
     var data = jQuery.parseJSON(data);
 
     $('li#' + data.name + ' label.area').each(function() {
-
-        var count = findArea(data, $(this).text());
-        $(this).next().text(count);
-
+        var countFromDb = findArea(data, $(this).text());
+        $(this).next().text(countFromDb);
     });
 
     $('li#' + data.name + ' label.location').each(function() {
-
-        var count = findLocation(data, $(this).text());
-        $(this).next().text(count);
-
+        var countFromDb = findLocation(data, $(this).text());
+        $(this).next().text(countFromDb);
     });
 
     $('li#' + data.name + ' a.device').each(function() {
+        var countFromDb = findDevice(data, $(this).text());
+        var countFromPage = $('span', $(this).parent()).text();
 
-        var count = findDevice(data, $(this).text());
-        $(this).next().text(count);
+        if(countFromDb != countFromPage) {
+            var message = '<div class="alert fade in"><button class="close"' +
+                'type="button" data-dismiss="alert">x</button><br>' +
+                '<strong>Новое событие на узле : </strong>' + $(this).text() +
+                '<p class="infodevice"></p></div>';
 
+            $('div.span7').prepend(message);
+        }
+        $('span', $(this).parent()).text(countFromDb);
     });
 
-})
-socket.on('SKFO', function(data){
-
+    $('div.bar').css('width', "0px");
+    t = 0;
+});
+socket.on('CFO', function(data) {
     var data = jQuery.parseJSON(data);
 
     $('li#' + data.name + ' label.area').each(function() {
-
-        var count = findArea(data, $(this).text());
-        $(this).next().text(count);
-
+        var countFromDb = findArea(data, $(this).text());
+        $(this).next().text(countFromDb);
     });
 
     $('li#' + data.name + ' label.location').each(function() {
-
-        var count = findLocation(data, $(this).text());
-        $(this).next().text(count);
-
+        var countFromDb = findLocation(data, $(this).text());
+        $(this).next().text(countFromDb);
     });
 
     $('li#' + data.name + ' a.device').each(function() {
+        var countFromDb = findDevice(data, $(this).text());
+        var countFromPage = $('span', $(this).parent()).text();
 
-        var count = findDevice(data, $(this).text());
-        $(this).next().text(count);
+        if(countFromDb != countFromPage) {
+            var message = '<div class="alert fade in"><button class="close"' +
+                'type="button" data-dismiss="alert">x</button><br>' +
+                '<strong>Новое событие на узле : </strong>' + $(this).text() +
+                '<p class="infodevice"></p></div>';
 
+            $('div.span7').prepend(message);
+        }
+        $('span', $(this).parent()).text(countFromDb);
     });
 
-})
-socket.on('CFO', function(data){
-
+    $('div.bar').css('width', "0px");
+    t = 0;
+});
+socket.on('SZFO', function(data) {
     var data = jQuery.parseJSON(data);
 
     $('li#' + data.name + ' label.area').each(function() {
-
-        var count = findArea(data, $(this).text());
-        $(this).next().text(count);
-
+        var countFromDb = findArea(data, $(this).text());
+        $(this).next().text(countFromDb);
     });
 
     $('li#' + data.name + ' label.location').each(function() {
-
-        var count = findLocation(data, $(this).text());
-        $(this).next().text(count);
-
+        var countFromDb = findLocation(data, $(this).text());
+        $(this).next().text(countFromDb);
     });
 
     $('li#' + data.name + ' a.device').each(function() {
+        var countFromDb = findDevice(data, $(this).text());
+        var countFromPage = $('span', $(this).parent()).text();
 
-        var count = findDevice(data, $(this).text());
-        $(this).next().text(count);
+        if(countFromDb != countFromPage) {
+            var message = '<div class="alert fade in"><button class="close"' +
+                'type="button" data-dismiss="alert">x</button><br>' +
+                '<strong>Новое событие на узле : </strong>' + $(this).text() +
+                '<p class="infodevice"></p></div>';
 
+            $('div.span7').prepend(message);
+        }
+        $('span', $(this).parent()).text(countFromDb);
     });
 
-})
-socket.on('SZFO', function(data){
-
+    $('div.bar').css('width', "0px");
+    t = 0;
+});
+socket.on('DFO', function(data) {
     var data = jQuery.parseJSON(data);
 
     $('li#' + data.name + ' label.area').each(function() {
-
-        var count = findArea(data, $(this).text());
-        $(this).next().text(count);
-
+        var countFromDb = findArea(data, $(this).text());
+        $(this).next().text(countFromDb);
     });
 
     $('li#' + data.name + ' label.location').each(function() {
-
-        var count = findLocation(data, $(this).text());
-        $(this).next().text(count);
-
+        var countFromDb = findLocation(data, $(this).text());
+        $(this).next().text(countFromDb);
     });
 
     $('li#' + data.name + ' a.device').each(function() {
+        var countFromDb = findDevice(data, $(this).text());
+        var countFromPage = $('span', $(this).parent()).text();
 
-        var count = findDevice(data, $(this).text());
-        $(this).next().text(count);
+        if(countFromDb != countFromPage) {
+            var message = '<div class="alert fade in"><button class="close"' +
+                'type="button" data-dismiss="alert">x</button><br>' +
+                '<strong>Новое событие на узле : </strong>' + $(this).text() +
+                '<p class="infodevice"></p></div>';
 
+            $('div.span7').prepend(message);
+        }
+        $('span', $(this).parent()).text(countFromDb);
     });
 
-})
-socket.on('DFO', function(data){
-
-    var data = jQuery.parseJSON(data);
-
-    $('li#' + data.name + ' label.area').each(function() {
-
-        var count = findArea(data, $(this).text());
-        $(this).next().text(count);
-
-    });
-
-    $('li#' + data.name + ' label.location').each(function() {
-
-        var count = findLocation(data, $(this).text());
-        $(this).next().text(count);
-
-    });
-
-    $('li#' + data.name + ' a.device').each(function() {
-
-        var count = findDevice(data, $(this).text());
-        $(this).next().text(count);
-
-    });
-
-})
+    $('div.bar').css('width', "0px");
+    t = 0;
+});
 
 function findArea(data, findObject){
 
