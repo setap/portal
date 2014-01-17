@@ -12,7 +12,9 @@
 
     <script type="text/javascript" src="/vendor/bower_components/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/js/script.js"></script>
-    <script type="text/javascript">$(function() {$('.map').maphilight();});</script>
+    <script type="text/javascript">$(function () {
+            $('.map').maphilight();
+        });</script>
     <script type="text/javascript" src="/js/tooltip.js"></script>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -24,9 +26,14 @@
 
 <body>
 
-<%-partial('../partials/topNavbar')%>
+<%- partial('../partials/topNavbar') %>
 
-<%-body -%>
+<%- body - %>
+
+<script src="/vendor/bower_components/jquery/jquery.js"></script>
+<script src="/vendor/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="socket.io/socket.io.js"></script>
+<script src="/js/stp.js"></script>
 
 </body>
 </html>

@@ -1,40 +1,35 @@
-<% layout('/layout/base.ejs')%>
-
+<% layout('/layout/base.ejs') %>
 
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span3">
-
-            <%-partial('partials/leftTree')%>
+            <%- partial('partials/leftTree') %>
 
         </div>
         <div class="span7">
 
-            <%-partial('partials/map')%>
+            <%- partial('partials/map') %>
 
-            <h4> Важные  события </h4>
+            <h4> Важные события </h4>
 
-            <%-partial('partials/centralTable')%>
+            <%- partial('partials/centralTable') %>
 
             <h4> Инциденты </h4>
 
-            <%-partial('partials/bottomTable')%>
+            <%- partial('partials/bottomTable') %>
 
         </div>
         <div class="span2">
 
-            <%-partial('partials/rightTreeTop')%>
+            <%- partial('partials/rightTreeTop') %>
 
-            <%-partial('partials/rightTreeTop2')%>
+            <%- partial('partials/rightTreeTop2') %>
 
-            <%-partial('partials/rightTreeTop3')%>
+            <%- partial('partials/rightTreeTop3') %>
 
         </div>
     </div>
 </div>
 
-<script src="/vendor/bower_components/jquery/jquery.js"></script>
-<script src="/vendor/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="socket.io/socket.io.js"></script>
-<script src="/js/stp.js"></script>
+
 
