@@ -14,10 +14,7 @@ $('.device').popover(
     html:true,
 
     content: function() {
-      var d = null;
-
-      d = $('div.info', $(this).parent()).html();
-
+      var d = $('div.info', $(this).parent()).html();
       return d;
     }
   }
@@ -336,84 +333,3 @@ function findDevice(data, findObject){
         }
     }
 }
-
-/*
-socket.on('device', function(data){
-
-
-    var data = jQuery.parseJSON(data);
-
-    var displayRegion = $('#' + data.name + ' ul').css("display") == 'block' ? true : false;
-    var displayArea = $('#' + data.name + ' ul li ul').css("display") == 'block' ? true : false;
-    var displayLocation = $('#' + data.name + ' ul li ul li ul').css("display") == 'block' ? true : false;
-
-
-    console.log(data.area['Астраханская обл.']);
-
-    var html='';
-    html += ' <li id="' + data.name + '"><label class="tree-toggle nav-header">' + data.name + '</label>'
-    for(var a =0; a < data.area.length; a++){
-
-        html += '<ul class="nav nav-list tree">';
-        html += '<li><label class="tree-toggle nav-header">' + data.area[a].n + '</label>';
-
-        for(var l = 0; l < data.area[a].l.length; l++){
-            html += '<ul class="nav nav-list tree">';
-            html += '<li><label class="tree-toggle nav-header">' + data.area[a].l[l].n + '</label>';
-
-            for(var d = 0; d < data.area[a].l[l].h.length; d++){
-                html += '<ul class="nav nav-list tree">';
-                html += '<li>';
-                html += '<a href="#" class="device" data-toggle="popover" data-placement="right">' +
-                    data.area[a].l[l].h[d].n;
-
-                if(data.area[a].l[l].h[d].s == 'ok'){
-                    html += '<span class="badge badge-success">1</span>';
-                }
-
-                html += '</a>';
-                html += '</li>';
-                html += '</ul>';
-            }
-
-            html += '</li>';
-            html += '</ul>';
-        }
-
-        html += '</li>';
-        html += '</ul>';
-    }
-    html += '</li>';
-
-    $('#'+data.name).replaceWith(html);
-
-
-    if(displayRegion == false){
-        $('#' + data.name + ' ul').hide();
-    }
-
-    $('#' + data.name + ' .tree-toggle').click(function () {
-        console.log('click');
-        $(this).parent().children('ul.tree').toggle(200);
-    });
-
-
-    console.log(html);
-})
-*/
-
-/*$(function(){
-    var docHeight = $(document).height();
-    $("body").append("<div id='overlay'></div>");
-    $("#overlay")
-        .height(docHeight)
-        .css({
-            'opacity' : 0.4,
-            'position': 'absolute',
-            'top': 0,
-            'left': 0,
-            'background-color': 'black',
-            'width': '100%',
-            'z-index': 5000
-        });
-});*/

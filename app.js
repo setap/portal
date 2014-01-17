@@ -7,6 +7,7 @@ var log = require('lib/log')(module);
 var app = express();
 var HttpError = require('error').HttpError;
 var async = require('async');
+require('device')();
 
 app.set('port',config.get("port"));
 
@@ -34,8 +35,6 @@ app.use(express.cookieParser('your secret here'));
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-
 require('routes')(app);
 
 app.use(function(req, res, next){
@@ -48,7 +47,7 @@ app.use(function(req, res, next){
 
 app.use(function(req, res, next) {
     if (req.url == '/'){
-//        res.end("Hello");
+
         res.render('index',{device:device})
     }else{
         next();
@@ -89,190 +88,7 @@ app.use(function(err, req, res, next){
    }
 });
 
-var oracle = require('oracle');
 
-var device = null;
 
-var YFO = 'ЮФО';
-var SFO = 'СФО';
-var UFO = 'УФО';
-var PFO = 'ПФО';
-var SKFO = 'СКФО';
-var CFO = 'ЦФО';
-var SZFO = 'СЗФО';
-var DFO = 'ДФО';
-
-var connectData = require('lib/oracle').connectData;
-
-oracle.connect(connectData, function(err, connection) {
-
-    if (err) {
-        log.error("Error connecting to db:", err);
-    }
-
-
-
-    connection.execute("call json2(:1,:2)",
-        [YFO, new oracle.OutParam(oracle.OCCISTRING, {size:4000})],
-        function(err, results){
-
-            setJSON(results.returnParam);
-            connection.close();
-
-        });
-});
-
-oracle.connect(connectData, function(err, connection) {
-
-    if (err) {
-        log.error("Error connecting to db:", err);
-    }
-
-
-
-    connection.execute("call json2(:1,:2)",
-        [SFO, new oracle.OutParam(oracle.OCCISTRING, {size:4000})],
-        function(err, results){
-
-            setJSON(results.returnParam);
-            connection.close();
-
-        });
-});
-
-oracle.connect(connectData, function(err, connection) {
-
-    if (err) {
-        log.error("Error connecting to db:", err);
-    }
-
-
-
-    connection.execute("call json2(:1,:2)",
-        [UFO, new oracle.OutParam(oracle.OCCISTRING, {size:4000})],
-        function(err, results){
-
-            setJSON(results.returnParam);
-            connection.close();
-
-        });
-});
-
-oracle.connect(connectData, function(err, connection) {
-
-    if (err) {
-        log.error("Error connecting to db:", err);
-    }
-
-
-
-    connection.execute("call json2(:1,:2)",
-        [PFO, new oracle.OutParam(oracle.OCCISTRING, {size:4000})],
-        function(err, results){
-
-            setJSON(results.returnParam);
-            connection.close();
-
-        });
-});
-
-oracle.connect(connectData, function(err, connection) {
-
-    if (err) {
-        log.error("Error connecting to db:", err);
-    }
-
-
-
-    connection.execute("call json2(:1,:2)",
-        [SKFO, new oracle.OutParam(oracle.OCCISTRING, {size:4000})],
-        function(err, results){
-
-            setJSON(results.returnParam);
-            connection.close();
-
-        });
-});
-
-oracle.connect(connectData, function(err, connection) {
-
-    if (err) {
-        log.error("Error connecting to db:", err);
-    }
-
-
-
-    connection.execute("call json2(:1,:2)",
-        [CFO, new oracle.OutParam(oracle.OCCISTRING, {size:4000})],
-        function(err, results){
-
-            setJSON(results.returnParam);
-            connection.close();
-
-        });
-});
-
-oracle.connect(connectData, function(err, connection) {
-
-    if (err) {
-        log.error("Error connecting to db:", err);
-    }
-
-
-
-    connection.execute("call json2(:1,:2)",
-        [SZFO, new oracle.OutParam(oracle.OCCISTRING, {size:4000})],
-        function(err, results){
-
-            setJSON(results.returnParam);
-            connection.close();
-
-        });
-});
-
-oracle.connect(connectData, function(err, connection) {
-
-    if (err) {
-        log.error("Error connecting to db:", err);
-    }
-
-
-
-    connection.execute("call json2(:1,:2)",
-        [DFO, new oracle.OutParam(oracle.OCCISTRING, {size:4000})],
-        function(err, results){
-
-            setJSON(results.returnParam);
-            connection.close();
-
-        });
-});
-
-var i = 0;
-
-function setJSON(results){
-
-    if (i == 0){
-        device = '{ "device" : ['
-    }
-
-    if(i < 7){
-        device += '[';
-        device += results;
-        device += '],'
-    }
-
-    if (i == 7){
-        device += '[';
-        device += results;
-        device += ']]}';
-
-        device = JSON.parse(device);
-
-        exports.device = device;
-    }
-
-    i++;
-}
 
 

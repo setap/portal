@@ -1,12 +1,10 @@
 
 var HttpError = require('error').HttpError;
 //var User = require('models/user').User;
-
+require('device');
 module.exports = function(app){
 
     app.get('/device', function(req, res, next) {
-        var device = require('../app.js').device;
-        console.log(device);
         res.json(device);
     });
 /*
