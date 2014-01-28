@@ -1,5 +1,7 @@
 var oracle = require('oracle');
 var connectData = require('../lib/oracle').connectData;
+var log = require('lib/log')(module);
+
 require('treeDevices');
 
 var YFO = 'ЮФО';
@@ -15,6 +17,8 @@ module.exports = function (server) {
     var io = require('socket.io').listen(server);
 
     io.set('log level', 0);
+    io.set('origins', 'localhost:*')
+    io.set('logger', log);
 
     io.sockets.on('connection', function (socket) {
 

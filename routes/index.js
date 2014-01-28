@@ -1,6 +1,7 @@
 var checkAuth = require('middleware/checkAuth');
+var checkAdmin = require('middleware/checkAdmin');
 
-module.exports = function(app){
+module.exports = function (app) {
 
     app.get('/portal', checkAuth, require('./mainpage').get);
 
@@ -9,6 +10,8 @@ module.exports = function(app){
     app.post('/login', require('./login').post);
 
     app.post('/logout', require('./logout').post);
+
+    app.get('/settings', checkAdmin, require('./settings').get);
 
     app.get('/session', require('./session').get);
 

@@ -1,0 +1,36 @@
+<div class="tree well" style="padding-left: 3px; padding-right: 5px;padding-top: 3px">
+    <h6>Оборудование транспортной сети</h6>
+    <ul style="margin-left: 0px">
+        <% for(var r in device.device){ %>
+        <li id="<%= device.device[r][0].name %>">
+            <span><i class="icon-plus-sign"></i></span> <a href=""
+                                                           id="<%= device.device[r][0].name %>"><%= device.device[r][0].name %></a>
+
+            <ul class="area">
+                <% for(var a in device.device[r][0].area){ %>
+                <li>
+                    <span><i class="icon-plus-sign"></i></span> <a href=""
+                                                                   class="area"><%= device.device[r][0].area[a].n %></a>
+                    <% for(var l in device.device[r][0].area[a].l){ %>
+                    <ul class="location-tree">
+                        <li>
+                            <span><i class="icon-plus-sign"></i></span> <a href=""
+                                                                           class="location"><%= device.device[r][0].area[a].l[l].n %></a>
+                            <% for(var d in device.device[r][0].area[a].l[l].h){ %>
+                            <ul class="device-tree">
+                                <li>
+                                    <a href="" class="device"><%= device.device[r][0].area[a].l[l].h[d].n %></a>
+                                </li>
+                            </ul>
+                            <% } %>
+                        </li>
+                    </ul>
+                    <% } %>
+                </li>
+                <% } %>
+            </ul>
+
+        </li>
+        <% } %>
+    </ul>
+</div>

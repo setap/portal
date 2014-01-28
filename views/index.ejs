@@ -3,12 +3,16 @@
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span3">
-            <%- partial('partials/leftTree') %>
+            <%- partial('partials/newTree') %>
 
         </div>
         <div class="span7">
 
             <%- partial('partials/map') %>
+
+            <label class="checkbox">
+                <input type="checkbox" id="chanel"> Каналы
+            </label>
 
             <h4> Важные события </h4>
 
@@ -31,5 +35,6 @@
     </div>
 </div>
 
-
+<script src="/vendor/bower_components/socket.io-client/dist/socket.io.js"></script>
+<script src="/js/stp.js"></script>
 

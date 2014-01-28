@@ -1,13 +1,14 @@
 <div class="navbar navbar-inverse navbar-fixed-top" xmlns="http://www.w3.org/1999/html">
     <div class="navbar-inner">
         <div class="container-fluid">
-            <a class="brand" href="#">Федеральная служба охраны Российской Федерации</a>
+            <a class="brand" href="\">Федеральная служба охраны Российской Федерации</a>
+
             <div class="nav-collapse collapse">
                 <p class="navbar-text pull-right">
 
                     <% if (user) { %>
                     <% if (user.get('username') == 'Administrator') { %>
-                    <a href="#" class="navbar-link">Настройки</a>
+                    <a href="/settings" class="navbar-link">Настройки</a>
                     <% } %>
                     <a href="#" class="navbar-link"><%= user.get("username") %></a>
                     <a href="" onclick="$('<form method=POST action=/logout>').submit();return false">Выйти</a></form>
@@ -15,7 +16,8 @@
 
                 </p>
 
-            </div><!--/.nav-collapse -->
+            </div>
+            <!--/.nav-collapse -->
         </div>
     </div>
 </div>
