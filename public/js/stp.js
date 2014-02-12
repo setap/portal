@@ -106,17 +106,36 @@ $(document).ready(function () {
   });
 });
 
+// Всплывающее окно при наведении на СЭ
+
 $('.device').popover(
   { trigger: 'hover',
     placement: 'right',
     html: true,
 
     content: function () {
+
+      var strUrl = "/ping", response = "";
+
+      jQuery.ajax({
+        url: strUrl,
+        data: {"device": this.text},
+        success: function (html) {
+          console.log(html);
+          response = html;
+        },
+        async: false
+      });
+      console.log($('div.info', $(this).parent()).next());
+      $('div.info:first-child', $(this).parent()).text(response[0]);
+
+
       var d = $('div.info', $(this).parent()).html();
       return d;
     }
   }
 );
+
 
 var socket = io.connect('', {
   reconnect: false

@@ -62,6 +62,9 @@ module.exports = function (server) {
 
   io.sockets.on('connection', function (socket) {
     clientSocket.push(socket);
+    socket.on('getDevicesInfo', function (data) {
+      console.log('getDevicesInfo');
+    });
   });
 
   setInterval(function () {

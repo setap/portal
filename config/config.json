@@ -26,10 +26,11 @@
       "maxAge": null
     }
   },
-  "refreshInterval": 60,
+  "refreshInterval": 600,
   "nameOfQuery": {
     "dfd": "dfd v",
     "json_devices": "json_devices_v2",
-    "incidents": "select * from(select CREATIONDATE, TICKETID, DESCRIPTION, REPORTEDBY, INCIDENT.INTERNALPRIORITY,row_number() over (order by CREATIONDATE desc) rn from INCIDENT order by CREATIONDATE DESC) where rn <=20"
+    "incidents": "select * from(select CREATIONDATE, TICKETID, DESCRIPTION, REPORTEDBY, INCIDENT.INTERNALPRIORITY,row_number() over (order by CREATIONDATE desc) rn from INCIDENT order by CREATIONDATE DESC) where rn <=20",
+    "ping_time": "select * from portal_ping_time"
   }
 }

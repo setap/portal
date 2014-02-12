@@ -3,8 +3,10 @@ var config = require('config');
 
 global.treeDevices = null;
 global.incidents = null;
+global.ping_time = null;
 
 module.exports = function () {
+
   var connectData = require('lib/oracle').connectData;
 
   oracle.connect(connectData, function (err, connection) {
@@ -56,12 +58,31 @@ module.exports = function () {
       for (var i = 0; i < incidents.length; i++) {
         incidents[i].CREATIONDATE = formatDate(incidents[i].CREATIONDATE);
       }
-      console.log(incidents);
 
       connection.close();
 
     })
-  })
+  });
+
+  oracle.connect(connectData, function (err, connection) {
+    if (err) {
+      console.log("Error connecting to db:", err);
+      return;
+    }
+
+    connection.execute(config.get("nameOfQuery:ping_time"), [], function (err, results) {
+      if (err) {
+        console.log("Error executing query:", err)
+      }
+
+      ping_time = results;
+      console.log(ping_time);
+
+
+      connection.close();
+
+    })
+  });
 
   function translite(str) {
     var translatedString = '';

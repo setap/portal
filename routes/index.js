@@ -17,5 +17,7 @@ module.exports = function (app) {
 
   app.get('/device', require('./devices').get);
 
+  app.get('/ping', require('./ping').get);
+
   //    app.get('/device/:id', require('./deviceid').get);
 }
