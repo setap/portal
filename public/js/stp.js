@@ -126,8 +126,10 @@ $('.device').popover(
         },
         async: false
       });
-      console.log($('div.info', $(this).parent()).next());
-      $('div.info:first-child', $(this).parent()).text(response[0]);
+      console.log();
+      $('div.info p', $(this).parent()).each(function () {
+        $(this).html('Ping time <span class="badge badge-success">' + response[0] + '</span>');
+      })
 
 
       var d = $('div.info', $(this).parent()).html();
