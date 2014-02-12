@@ -1,6 +1,6 @@
 <% layout('/layout/base.ejs') %>
 
-<div class="container-fluid">
+<div class="container-fluid" xmlns="http://www.w3.org/1999/html">
     <div class="row-fluid">
         <div class="span3">
             <%- partial('partials/newTree') %>
@@ -11,14 +11,14 @@
             <%- partial('partials/map') %>
 
             <label class="checkbox">
-                <input type="checkbox" id="chanel"> Каналы
+                <input type="checkbox" id="chanel"> Каналы </input>
             </label>
 
-            <h4> Важные события </h4>
+            <h5 style="text-align: left;"> Последние события </h5>
 
             <%- partial('partials/centralTable') %>
 
-            <h4> Инциденты </h4>
+            <h5 style="text-align: left"> Последние инциденты </h5>
 
             <%- partial('partials/bottomTable') %>
 

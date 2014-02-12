@@ -7,6 +7,7 @@ body {
     padding-top: 60px;
     padding-bottom: 40px;
 }
+
 .sidebar-nav {
     padding: 9px 0;
 }
@@ -20,18 +21,18 @@ body {
     }
 }
 
-#tooltip{
-    background:#FFFFFF;
-    border:1px solid #666666;
-    color:#333333;
-    font:menu;
-    margin:10px;
-    padding:3px 5px;
-    position:absolute;
-    visibility:hidden
+#tooltip {
+    background: #FFFFFF;
+    border: 1px solid #666666;
+    color: #333333;
+    font: menu;
+    margin: 10px;
+    padding: 3px 5px;
+    position: absolute;
+    visibility: hidden
 }
 
-.info{
+.info {
     display: none;
 }
 
@@ -110,7 +111,7 @@ p.navbar-text a {
 .tree li span {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-    border: 1px solid #999;
+    /*border: 1px solid #999;*/
     border-radius: 5px;
     display: inline-block;
     padding: 3px 8px;
@@ -133,4 +134,8 @@ p.navbar-text a {
     background: #eee;
     border: 1px solid #94a0b4;
     color: #000
+}
+
+h6, h5 {
+    text-align: center;
 }

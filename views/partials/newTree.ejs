@@ -2,24 +2,46 @@
     <h6>Оборудование транспортной сети</h6>
     <ul style="margin-left: 0px">
         <% for(var r in device.device){ %>
-        <li id="<%= device.device[r][0].name %>">
-            <span><i class="icon-plus-sign"></i></span> <a href=""
-                                                           id="<%= device.device[r][0].name %>"><%= device.device[r][0].name %></a>
+        <li id="<%= device.device[r].name %>">
+            <span><i class="icon-plus-sign"></i></span> <a href="#"
+                                                           id="<%= device.device[r].name %>"><%= device.device[r].name %></a>
 
             <ul class="area">
-                <% for(var a in device.device[r][0].area){ %>
+                <% for(var a in device.device[r].area){ %>
                 <li>
-                    <span><i class="icon-plus-sign"></i></span> <a href=""
-                                                                   class="area"><%= device.device[r][0].area[a].n %></a>
-                    <% for(var l in device.device[r][0].area[a].l){ %>
+                    <span><i class="icon-plus-sign"></i></span>
+                    <a href="" class="area"><%= device.device[r].area[a].n %></a>
+                    <% if('ok' == 'ok'){ %>
+                    <span class="badge">5</span>
+                    <% } %>
+
+                    <% for(var l in device.device[r].area[a].l){ %>
                     <ul class="location-tree">
                         <li>
-                            <span><i class="icon-plus-sign"></i></span> <a href=""
-                                                                           class="location"><%= device.device[r][0].area[a].l[l].n %></a>
-                            <% for(var d in device.device[r][0].area[a].l[l].h){ %>
+                            <span><i class="icon-plus-sign"></i></span>
+                            <a href="" class="location"><%= device.device[r].area[a].l[l].n %></a>
+                            <% if('ok' == 'ok'){ %>
+                            <span class="badge badge-success"></span>
+                            <% } %>
+
+                            <% for(var d in device.device[r].area[a].l[l].h){ %>
                             <ul class="device-tree">
                                 <li>
-                                    <a href="" class="device"><%= device.device[r][0].area[a].l[l].h[d].n %></a>
+                                    <a href="" class="device"><%= device.device[r].area[a].l[l].h[d].n %></a>
+                                    <% if("ok" == 'ok'){ %>
+                                    <span class="badge badge-success"><%= device.device[r].area[a].l[l].h[d].c %></span>
+                                    <% } %>
+                                    <div class="info">
+                                        <p>Метрика 1: 40Mb</p>
+
+                                        <p>Метрика 2: 4</p>
+
+                                        <p>Метрика 3: 466</p>
+
+                                        <p>Метрика 4: 1</p>
+
+                                        <p>Метрика 5: 1</p>
+                                    </div>
                                 </li>
                             </ul>
                             <% } %>
