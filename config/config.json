@@ -1,0 +1,35 @@
+{
+  "port": "3000",
+  "mongoose": {
+    "uri": "mongodb://10.30.1.21/portal",
+    "option": {
+      "server": {
+        "socketOptions": {
+          "keepAlive": 1
+        }
+      }
+    }
+  },
+  "oracle": {
+    "hostname": "10.30.1.12",
+    "port": 1521,
+    "database": "ctginst1",
+    "user": "maximo",
+    "password": "maximo"
+  },
+  "session": {
+    "secret": "KillerIsJim",
+    "key": "sid",
+    "cookie": {
+      "path": "/",
+      "httpOnly": true,
+      "maxAge": null
+    }
+  },
+  "refreshInterval": 60,
+  "nameOfQuery": {
+    "dfd": "dfd",
+    "json_devices": "json_devices_v2",
+    "incidents": "select * from(select CREATIONDATE, TICKETID, DESCRIPTION, REPORTEDBY, INCIDENT.INTERNALPRIORITY,row_number() over (order by CREATIONDATE desc) rn from INCIDENT order by CREATIONDATE DESC) where rn <=20"
+  }
+}
