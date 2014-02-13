@@ -4,8 +4,6 @@ var log = require('lib/log')(module);
 var fs = require('fs');
 var config = require('config');
 
-require('treeDevices');
-
 function translite(str) {
   var translatedString = '';
   for (var i = 0; i < str.length; i++) {
@@ -96,7 +94,7 @@ module.exports = function (server) {
             }
           }
 
-          treeDevices = results;
+          global.treeDevices = results;
 
           for (var i = 0; i < clientSocket.length; i++) {
             clientSocket[i].emit('devices', results);
@@ -106,6 +104,74 @@ module.exports = function (server) {
 
         });
     });
+
+    oracle.connect(connectData, function (err, connection) {
+      if (err) {
+        console.log("Error connecting to db:", err);
+        return;
+      }
+
+      connection.execute(config.get("nameOfQuery:incidents"), [], function (err, results) {
+        if (err) {
+          console.log("Error executing query:", err)
+        }
+
+        incidents = results;
+        for (var i = 0; i < incidents.length; i++) {
+          incidents[i].CREATIONDATE = formatDate(incidents[i].CREATIONDATE);
+        }
+        log.info('Incidents data loaded from Oracle');
+        connection.close();
+
+      })
+    });
+
+    oracle.connect(connectData, function (err, connection) {
+      if (err) {
+        console.log("Error connecting to db:", err);
+        return;
+      }
+
+      connection.execute(config.get("nameOfQuery:ping_time"), [], function (err, results) {
+        if (err) {
+          console.log("Error executing query:", err)
+        }
+
+        ncim_metrics = results;
+        log.info('NCIM data loaded from Oracle');
+
+
+        connection.close();
+
+      })
+    });
+
   }, config.get('refreshInterval') * 1000);
+
+  function formatDate(date) {
+    02
+
+    03
+    var dd = date.getDate()
+    04
+    if (dd < 10) dd = '0' + dd;
+    05
+
+    06
+    var mm = date.getMonth() + 1
+    07
+    if (mm < 10) mm = '0' + mm;
+    08
+
+    09
+    var yy = date.getFullYear() % 100;
+    10
+    if (yy < 10) yy = '0' + yy;
+    11
+
+    12
+    return dd + '.' + mm + '.' + yy;
+    13
+  }
 
 }

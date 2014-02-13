@@ -1,4 +1,4 @@
+//require('treeDevices')();
 exports.get = function (req, res) {
-  require('treeDevices')();
-  res.render('index', {device: treeDevices, incidends: incidents});
+  res.render('index', {device: global.treeDevices, incidends: global.incidents});
 }

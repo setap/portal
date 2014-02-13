@@ -1,4 +1,4 @@
+//require('treeDevices')()
 exports.get = function (req, res) {
-    require('treeDevices')()
-    res.json(treeDevices);
+  res.json(global.treeDevices);
 }

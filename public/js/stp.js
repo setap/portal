@@ -120,24 +120,29 @@ $('.device').popover(
       jQuery.ajax({
         url: strUrl,
         data: {"device": this.text},
-        success: function (html) {
-          console.log(html);
-          response = html;
+        success: function (data) {
+          response = data;
         },
         async: false
       });
-      console.log();
-      $('div.info p', $(this).parent()).each(function () {
-        $(this).html('Ping time <span class="badge badge-success">' + response[0] + '</span>');
-      })
 
+      if (response.RTT == -1 || response.RTT == undefined) {
+        $('p.rtt', $(this).parent()).html('RTT <span class="badge badge-important">' + 'NA' + '</span>');
+      } else {
+        $('p.rtt', $(this).parent()).html('RTT <span class="badge badge-success">' + response.RTT + 'ms' + '</span>');
+      }
+
+      if (response.CPUBUSYPOLL == null || response.CPUBUSYPOLL == undefined) {
+        $('p.cpubusy', $(this).parent()).html('CpuBusyPoll <span class="badge">' + 'NA' + '</span>');
+      } else {
+        $('p.cpubusy', $(this).parent()).html('CpuBusyPoll <span class="badge badge-success">' + response.CPUBUSYPOLL + '%' + '</span>');
+      }
 
       var d = $('div.info', $(this).parent()).html();
       return d;
     }
   }
 );
-
 
 var socket = io.connect('', {
   reconnect: false
@@ -153,7 +158,7 @@ setInterval(function () {
 socket
   .on('devices', function (data) {
     for (var i = 0; i < data.device.length; i++) {
-      setCountEvent(data.device[i]);
+      //setCountEvent(data.device[i]);
     }
     t = 0;
   })

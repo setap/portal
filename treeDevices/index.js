@@ -1,9 +1,10 @@
 var oracle = require('oracle');
 var config = require('config');
+var log = require('lib/log')(module);
 
 global.treeDevices = null;
 global.incidents = null;
-global.ping_time = null;
+global.ncim_metrics = null;
 
 module.exports = function () {
 
@@ -39,6 +40,7 @@ module.exports = function () {
           }
         }
         treeDevices = results;
+        log.info('Tree devices data loaded from Oracle');
         connection.close();
       });
   });
@@ -58,7 +60,7 @@ module.exports = function () {
       for (var i = 0; i < incidents.length; i++) {
         incidents[i].CREATIONDATE = formatDate(incidents[i].CREATIONDATE);
       }
-
+      log.info('Incidents data loaded from Oracle');
       connection.close();
 
     })
@@ -75,8 +77,8 @@ module.exports = function () {
         console.log("Error executing query:", err)
       }
 
-      ping_time = results;
-      console.log(ping_time);
+      ncim_metrics = results;
+      log.info('NCIM data loaded from Oracle');
 
 
       connection.close();

@@ -12,7 +12,7 @@
                     <span><i class="icon-plus-sign"></i></span>
                     <a href="" class="area"><%= device.device[r].area[a].n %></a>
                     <% if('ok' == 'ok'){ %>
-                    <span class="badge">5</span>
+                    <span class="badge"></span>
                     <% } %>
 
                     <% for(var l in device.device[r].area[a].l){ %>
@@ -32,15 +32,10 @@
                                     <span class="badge badge-success"><%= device.device[r].area[a].l[l].h[d].c %></span>
                                     <% } %>
                                     <div class="info">
-                                        <p>Метрика 1: 40Mb</p>
+                                        <p class="rtt"></p>
 
-                                        <p>Метрика 2: 4</p>
+                                        <p class="cpubusy"></p>
 
-                                        <p>Метрика 3: 466</p>
-
-                                        <p>Метрика 4: 1</p>
-
-                                        <p>Метрика 5: 1</p>
                                     </div>
                                 </li>
                             </ul>
