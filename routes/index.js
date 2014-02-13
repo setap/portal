@@ -19,5 +19,7 @@ module.exports = function (app) {
 
   app.get('/ping', require('./ping').get);
 
+  app.get('/info', require('./info').get);
+
   //    app.get('/device/:id', require('./deviceid').get);
 }

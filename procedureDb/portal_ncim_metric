@@ -1,0 +1,59 @@
+select d1.hostname,
+       d1.rtt,
+       d3.cpuBusyPoll,
+       d2.data
+from (
+
+      SELECT
+           UPPER(t1.hostname) as hostname,
+             t2.value as rtt
+
+      from (
+            select max(poll_time) as poll_time,
+                   hostname as hostname,
+                   max(data_label) as data_label
+            from knp_poll_data_collection@ncim2 where POLLDEF_NAME= 'Default Chassis Ping' group by hostname
+          ) t1
+
+      left outer join knp_poll_data_collection@ncim2 t2 on (t1.poll_time=t2.poll_time and t1.hostname = t2.hostname)
+      where t2.data_label='PingTime'
+) d1
+left outer join (
+      select hostname, '{"ifname":['||listagg( '{"name":"'||ifname||'", "snmpOutBandwidth": "'||value||'"}', ',') within group (order by 1) ||']}' as data from (
+
+      SELECT
+           UPPER(t1.hostname) as hostname,
+             t1.poll_time,
+             t1.data_label,
+             t2.ifname as ifname,
+             t2.value as value
+
+      from (
+            select max(poll_time) as poll_time,
+                   hostname as hostname,
+                   --polldef_name,
+                   max(data_label) as data_label
+                   --value
+            from knp_poll_data_collection@ncim2 where POLLDEF_NAME= 'snmpOutBandwidth' group by hostname
+          ) t1
+
+      left outer join knp_poll_data_collection@ncim2 t2 on (t1.poll_time=t2.poll_time and t1.hostname = t2.hostname)
+
+      ) group by hostname
+) d2 on d1.hostname = d2.hostname
+left outer join (
+      SELECT
+           UPPER(t1.hostname) as hostname,
+             t2.value as cpuBusyPoll
+
+      from (
+            select max(poll_time) as poll_time,
+                   hostname as hostname,
+                   --polldef_name,
+                   max(data_label) as data_label
+                   --value
+            from knp_poll_data_collection@ncim2 where POLLDEF_NAME= 'cpuBusyPoll' group by hostname
+          ) t1
+
+      left outer join knp_poll_data_collection@ncim2 t2 on (t1.poll_time=t2.poll_time and t1.hostname = t2.hostname)
+) d3 on d3.hostname = d1.hostname

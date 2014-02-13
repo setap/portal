@@ -17,8 +17,8 @@ $(function () {
 
 // Переключение карт по регионам
 
-$(function () {
-  $('.tree li.parent_li > a').on('click', function (e) {
+/*$(function () {
+ $('.tree li.parent_li > a').on('click', function (e) {
     var region = $(this).attr('id');
     var map = $('.span7').next();
 
@@ -28,6 +28,12 @@ $(function () {
       '</h5><object data="/images/' + region + '.svg" ' +
       'type="image/svg+xml" id="imap" width="100%" height="420"></object></div>');
   })
+ });*/
+
+$('.location').on('click', function (e) {
+  $('div.map').remove();
+
+  $('div.span7').prepend('<div class="map"><h5>Транспортный узел ' + this.text + '</h5><img src="/images/' + this.text.toLowerCase() + '.png"/></div>');
 })
 
 //Пользовательские классы добавлени/удаления CSS свойств для работы с SVG
@@ -143,6 +149,50 @@ $('.device').popover(
     }
   }
 );
+
+$('.device').click(function () {
+  var strUrl = "/info", response = "";
+  console.log('click');
+  jQuery.ajax({
+    url: strUrl,
+    data: {"device": this.text},
+    success: function (data) {
+      response = data;
+
+    },
+    async: false
+  });
+
+  var snmpOutBandwidth = JSON.parse(response.DATA);
+
+  var html = '<h5>' + this.text + '</h5>'
+  html += '<div class="map"><table class="table table-striped table-condensed">';
+
+  html +=
+    '<thead>'
+      + '<tr>'
+      + '<th>Интерфейс</th>'
+      + '<th>snmpOutBandwidth</th>'
+      + '<th>snmpInBandwidth</th>'
+      + '</tr>'
+      + '</thead>';
+
+  $('div.map').remove();
+
+  for (var i in snmpOutBandwidth.ifname) {
+
+    html += '<tr>'
+      + '<td>' + snmpOutBandwidth.ifname[i].name + '</td>'
+      + '<td>' + snmpOutBandwidth.ifname[i].snmpOutBandwidth + '</td>'
+      + '<td>0</td>'
+      + '</tr>'
+  }
+
+  html += '</table></div>'
+  $('div.span7').prepend(html);
+  console.log(snmpOutBandwidth);
+
+});
 
 var socket = io.connect('', {
   reconnect: false

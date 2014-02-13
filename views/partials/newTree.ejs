@@ -19,7 +19,7 @@
                     <ul class="location-tree">
                         <li>
                             <span><i class="icon-plus-sign"></i></span>
-                            <a href="" class="location"><%= device.device[r].area[a].l[l].n %></a>
+                            <a href="#" class="location"><%= device.device[r].area[a].l[l].n %></a>
                             <% if('ok' == 'ok'){ %>
                             <span class="badge badge-success"></span>
                             <% } %>
@@ -27,7 +27,7 @@
                             <% for(var d in device.device[r].area[a].l[l].h){ %>
                             <ul class="device-tree">
                                 <li>
-                                    <a href="" class="device"><%= device.device[r].area[a].l[l].h[d].n %></a>
+                                    <a href="#" class="device"><%= device.device[r].area[a].l[l].h[d].n %></a>
                                     <% if("ok" == 'ok'){ %>
                                     <span class="badge badge-success"><%= device.device[r].area[a].l[l].h[d].c %></span>
                                     <% } %>
