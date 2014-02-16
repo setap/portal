@@ -1,19 +1,15 @@
-<div class="well sidebar-nav">
+<div class="well sidebar-nav netcool">
+    <h5>Netcool</h5>
     <ul class="nav nav-list">
         <ul class="nav nav-list">
-
-            <div class="progress progress-danger">
-                <div class="bar" style="width: 0px">device</div>
-            </div>
-            <div class="progress progress-info">
-                <div class="bar1" style="width: 0px"></div>
-            </div>
-            <div class="progress progress-warning">
-                <div class="bar2" style="width: 0px"></div>
-            </div>
-            <div class="progress progress-danger">
-                <div class="bar3" style="width: 0px"></div>
-            </div>
+            <% var countDownDevices = 0; %>
+            <% for(var i = 0; i < netcool.rowset.rows.length; i++) { %>
+            <% if(netcool.rowset.rows[i].Summary.indexOf('Chasiss ping failed') != -1) { %>
+            <% countDownDevices++; %>
+            <% } %>
+            <% } %>
+            <li>Всего событий&nbsp;<span class="badge"><%= netcool.rowset.affectedRows %></span></li>
+            <li>Недоступных устройств&nbsp;<span class="badge badge-success"><%= countDownDevices %></span></li>
 
         </ul>
     </ul>

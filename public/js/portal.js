@@ -174,6 +174,19 @@ setInterval(function () {
 }, 500);
 
 socket
+  .on('netcool', function (data) {
+    var countDownDevices = 0;
+    data = JSON.parse(data);
+    for (var i = 0; i < data.rowset.rows.length; i++) {
+
+      if (data.rowset.rows[i].Summary.indexOf('Chasiss ping failed') != -1) {
+        countDownDevices++;
+        console.log(data.rowset.rows[i].Summary);
+      }
+    }
+    var html = ejs.render(templates.tempNetcoolAlert, {countDownDevices: countDownDevices, countEvents: data.rowset.affectedRows});
+    $('.netcool').html(html);
+  })
   .on('devices', function (data) {
     for (var i = 0; i < data.device.length; i++) {
       //setCountEvent(data.device[i]);

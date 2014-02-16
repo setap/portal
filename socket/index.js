@@ -3,6 +3,7 @@ var connectData = require('../lib/oracle').connectData;
 var log = require('lib/log')(module);
 var fs = require('fs');
 var config = require('config');
+var http = require('http');
 
 function translite(str) {
   var translatedString = '';
@@ -145,6 +146,29 @@ module.exports = function (server) {
 
       })
     });
+
+
+    var output = '';
+
+    http.get(require('lib/netcool').netcoolOptions,function (res) {
+      res.on('data', function (chunk) {
+        output += chunk;
+      });
+      res.on('end', function (res) {
+
+        var result = JSON.parse(output);
+        netcoolAlert = result;
+
+        for (var i = 0; i < clientSocket.length; i++) {
+          clientSocket[i].emit('netcool', JSON.stringify(netcoolAlert));
+        }
+        log.info('Netcool data loaded');
+      })
+
+    }).on('error', function (e) {
+        console.log("Got error: " + e.message);
+      });
+
 
   }, config.get('refreshInterval') * 1000);
 

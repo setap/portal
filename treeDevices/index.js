@@ -1,10 +1,13 @@
 var oracle = require('oracle');
 var config = require('config');
 var log = require('lib/log')(module);
+var http = require('http');
+
 
 global.treeDevices = null;
 global.incidents = null;
 global.ncim_metrics = null;
+global.netcoolAlert = null;
 
 module.exports = function () {
 
@@ -85,6 +88,22 @@ module.exports = function () {
 
     })
   });
+
+  var output = '';
+
+  http.get(require('lib/netcool').netcoolOptions,function (res) {
+    res.on('data', function (chunk) {
+      output += chunk;
+    });
+    res.on('end', function (res) {
+      var result = JSON.parse(output);
+      netcoolAlert = result;
+      log.info('Netcool data loaded');
+    })
+
+  }).on('error', function (e) {
+      console.log("Got error: " + e.message);
+    });
 
   function translite(str) {
     var translatedString = '';
