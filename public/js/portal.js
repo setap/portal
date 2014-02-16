@@ -17,24 +17,17 @@ $(function () {
 
 // Переключение карт по регионам
 
-/*$(function () {
- $('.tree li.parent_li > a').on('click', function (e) {
-    var region = $(this).attr('id');
-    var map = $('.span7').next();
+$('.region').on('click', function (e) {
+  var html = ejs.render(templates.tempRegionMap, {node: this});
+  $('.map').html(html);
+});
 
-    $('div.map').remove();
-
-    $('div.span7').prepend('<div class="map"><h5>Транспортная сесть пакетной коммутации спецсвязи ФСО ' + region +
-      '</h5><object data="/images/' + region + '.svg" ' +
-      'type="image/svg+xml" id="imap" width="100%" height="420"></object></div>');
-  })
- });*/
+// Переключение по городам
 
 $('.location').on('click', function (e) {
-  $('div.map').remove();
-
-  $('div.span7').prepend('<div class="map"><h5>Транспортный узел ' + this.text + '</h5><img src="/images/' + this.text.toLowerCase() + '.png"/></div>');
-})
+  var html = ejs.render(templates.tempNodeMap, {node: this});
+  $('.map').html(html);
+});
 
 //Пользовательские классы добавлени/удаления CSS свойств для работы с SVG
 
@@ -165,33 +158,8 @@ $('.device').click(function () {
 
   var snmpOutBandwidth = JSON.parse(response.DATA);
 
-  var html = '<h5>' + this.text + '</h5>'
-  html += '<div class="map"><table class="table table-striped table-condensed">';
-
-  html +=
-    '<thead>'
-      + '<tr>'
-      + '<th>Интерфейс</th>'
-      + '<th>snmpOutBandwidth</th>'
-      + '<th>snmpInBandwidth</th>'
-      + '</tr>'
-      + '</thead>';
-
-  $('div.map').remove();
-
-  for (var i in snmpOutBandwidth.ifname) {
-
-    html += '<tr>'
-      + '<td>' + snmpOutBandwidth.ifname[i].name + '</td>'
-      + '<td>' + snmpOutBandwidth.ifname[i].snmpOutBandwidth + '</td>'
-      + '<td>0</td>'
-      + '</tr>'
-  }
-
-  html += '</table></div>'
-  $('div.span7').prepend(html);
-  console.log(snmpOutBandwidth);
-
+  var html = ejs.render(templates.tempSnmpBandwidth, {snmpOutBandwidth: snmpOutBandwidth, node: this});
+  $('.map').html(html);
 });
 
 var socket = io.connect('', {
