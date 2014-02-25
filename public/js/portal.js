@@ -96,15 +96,6 @@ $(window).load(function () {
   })
 })
 
-$(document).ready(function () {
-  var collapseNode = [];
-
-  $('.tree-toggle').click(function () {
-    collapseNode.push();
-    $(this).parent().children('ul.tree').toggle(200);
-  });
-});
-
 // Всплывающее окно при наведении на СЭ
 
 $('.device').popover(
@@ -126,15 +117,15 @@ $('.device').popover(
       });
 
       if (response.RTT == -1 || response.RTT == undefined) {
-        $('p.rtt', $(this).parent()).html('RTT <span class="badge badge-important">' + 'NA' + '</span>');
+        $('p.rtt', $(this).parent()).html('Время отклика <span class="badge badge-important">' + 'NA' + '</span>');
       } else {
-        $('p.rtt', $(this).parent()).html('RTT <span class="badge badge-success">' + response.RTT + 'ms' + '</span>');
+        $('p.rtt', $(this).parent()).html('Время отклика <span class="badge badge-success">' + response.RTT + 'ms' + '</span>');
       }
 
       if (response.CPUBUSYPOLL == null || response.CPUBUSYPOLL == undefined) {
-        $('p.cpubusy', $(this).parent()).html('CpuBusyPoll <span class="badge">' + 'NA' + '</span>');
+        $('p.cpubusy', $(this).parent()).html('Загрузка ЦП <span class="badge">' + 'NA' + '</span>');
       } else {
-        $('p.cpubusy', $(this).parent()).html('CpuBusyPoll <span class="badge badge-success">' + response.CPUBUSYPOLL + '%' + '</span>');
+        $('p.cpubusy', $(this).parent()).html('Загрузка ЦП <span class="badge badge-success">' + response.CPUBUSYPOLL + '%' + '</span>');
       }
 
       var d = $('div.info', $(this).parent()).html();
@@ -151,7 +142,6 @@ $('.device').click(function () {
     data: {"device": this.text},
     success: function (data) {
       response = data;
-
     },
     async: false
   });
@@ -166,15 +156,25 @@ var socket = io.connect('', {
   reconnect: false
 });
 
-var t = 0;
+var tNetcol = 0;
+var tNCIM = 0;
+var tSCCD = 0;
+var tWisla = 0;
 
 setInterval(function () {
-  t += 1;
-  $('div.bar').css('width', t + "px");
-}, 500);
+  tNetcol += 1;
+  tNCIM += 1;
+  tSCCD += 1;
+  tWisla += 1;
+  $('div.bar.netcool').css('width', tNetcol + "px");
+  $('div.bar.ncim').css('width', tNCIM + "px");
+  $('div.sccd').css('width', tSCCD + "px");
+  $('div.wisla').css('width', tWisla + "px");
+}, 700);
 
 socket
   .on('netcool', function (data) {
+    tNetcol = 0;
     var countDownDevices = 0;
     data = JSON.parse(data);
     for (var i = 0; i < data.rowset.rows.length; i++) {
@@ -186,6 +186,26 @@ socket
     }
     var html = ejs.render(templates.tempNetcoolAlert, {countDownDevices: countDownDevices, countEvents: data.rowset.affectedRows});
     $('.netcool').html(html);
+  })
+  .on('ncim', function (data) {
+    tNCIM = 0;
+  })
+  .on('wisla', function (data) {
+    tWisla = 0;
+    var listChanelId = [];
+    $('path.chanel').each(function () {
+      listChanelId.push(this.id);
+    });
+
+
+    for (var i = 0; i < data.serviceBaseDtos.length; i++) {
+      for (var j = 0; j < listChanelId.length; j++) {
+        if (data.serviceBaseDtos[i].id == listChanelId[j]) {
+          console.log(data.serviceBaseDtos[i].name);
+
+        }
+      }
+    }
   })
   .on('devices', function (data) {
     for (var i = 0; i < data.device.length; i++) {

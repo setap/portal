@@ -1,9 +1,18 @@
-<div class="well sidebar-nav">
-    <ul class="nav nav-list">
-        <ul class="nav nav-list">
+<div class="tree well" style="padding-left: 3px; padding-right: 5px;padding-top: 3px">
+    <h6>WiSLA</h6>
+    <ul style="margin-left: 0px">
+        <li>
+            <span><i class="icon-plus-sign"></i></span> <a class="region" href="#"> RED </a>
 
+            <ul class="area">
+                <% for(var r in wisla.serviceBaseDtos) { %>
+                <li>
+                    <a href="" class="area"><%= wisla.serviceBaseDtos[r].name %>
+                        &nbsp;<%= wisla.serviceBaseDtos[r].id %></a>
+                </li>
+                <% } %>
 
-
-        </ul>
+            </ul>
+        </li>
     </ul>
 </div>

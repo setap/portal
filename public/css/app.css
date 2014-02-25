@@ -65,12 +65,15 @@ p.navbar-text a {
     padding-bottom: 6px;
 }
 
+h6, h5 {
+    text-align: center;
+}
+
 .tree {
     min-height: 20px;
     padding: 19px;
     margin-bottom: 20px;
     background-color: #fbfbfb;
-    /*border:1px solid #999;*/
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -85,14 +88,12 @@ p.navbar-text a {
     padding: 10px 5px 0 5px;
     position: relative
 }
-
 .tree li::before, .tree li::after {
     content: '';
     left: -20px;
     position: absolute;
     right: auto
 }
-
 .tree li::before {
     border-left: 1px solid #999;
     bottom: 50px;
@@ -100,18 +101,16 @@ p.navbar-text a {
     top: 0;
     width: 1px
 }
-
 .tree li::after {
     border-top: 1px solid #999;
-    height: 10px;
+    height: 20px;
     top: 25px;
     width: 25px
 }
-
 .tree li span {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-    /*border: 1px solid #999;*/
+    border: 1px solid #999;
     border-radius: 5px;
     display: inline-block;
     padding: 3px 8px;
@@ -125,7 +124,6 @@ p.navbar-text a {
 .tree > ul > li::before, .tree > ul > li::after {
     border: 0
 }
-
 .tree li:last-child::before {
     height: 30px
 }
@@ -134,8 +132,4 @@ p.navbar-text a {
     background: #eee;
     border: 1px solid #94a0b4;
     color: #000
-}
-
-h6, h5 {
-    text-align: center;
 }

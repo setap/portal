@@ -12,5 +12,6 @@ exports.get = function (req, res) {
     device: global.treeDevices,
     incidents: global.incidents,
     templates: templates,
-    netcool: netcoolAlert});
+    netcool: netcoolAlert,
+    wisla: dataFromWisla});
 }

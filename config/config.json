@@ -38,5 +38,12 @@
     "path": "/objectserver/restapi/alerts/status",
     "login": "webgui",
     "password": "netcool"
+  },
+  "wisla": {
+    "host": "10.30.1.20",
+    "port": "8080",
+    "path": "/sla-management/rest/serviceList/offset/0/limit/200",
+    "login": "admin",
+    "password": "031XavfQ74"
   }
 }
