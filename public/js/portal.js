@@ -202,6 +202,7 @@ socket
       for (var j = 0; j < listChanelId.length; j++) {
         if (data.serviceBaseDtos[i].id == listChanelId[j]) {
           console.log(data.serviceBaseDtos[i].name);
+          $("#" + listChanelId[j]).myAddClass("selected");
 
         }
       }
