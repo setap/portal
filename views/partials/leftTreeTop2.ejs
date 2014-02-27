@@ -1,12 +1,10 @@
 <div class="well unavailable" style="padding-left: 3px; padding-right: 5px;padding-top: 3px">
     <h5>Недоступные устройства</h5>
     <ul>
-        <% for(var r in wisla.serviceBaseDtos) { %>
-        <% if(wisla.serviceBaseDtos[r].currentServiceStatus == "RED") { %>
+        <% for(var r in netcool.rowset.rows) { %>
         <li>
-            <a href="" class="wisla chanel"><%= wisla.serviceBaseDtos[r].name %></a>
+            <a href="" class="wisla chanel"><%= netcool.rowset.rows[r].NodeAlias %></a>
         </li>
-        <% } %>
         <% } %>
     </ul>
 </div>

@@ -175,19 +175,17 @@ setInterval(function () {
 
 socket
   .on('netcool', function (data) {
+
     tNetcol = 0;
-    var countDownDevices = 0;
-    var unavailableNode = [];
+
     data = JSON.parse(data);
-    for (var i = 0; i < data.rowset.rows.length; i++) {
-      if (data.rowset.rows[i].Summary.indexOf('Chassis Ping fail') != -1) {
-        countDownDevices++;
-        unavailableNode.push(data.rowset.rows[i].NodeAlias)
-        console.log(data.rowset.rows[i].Summary);
-      }
-    }
-    var html = ejs.render(templates.tempNetcoolAlert, {countDownDevices: countDownDevices, countEvents: data.rowset.affectedRows});
-    var htmlUnavNode = ejs.render(templates.tempUnavailableNode, {unavailableNode: unavailableNode});
+
+
+    console.log(data.rowset.rows);
+
+    var html = ejs.render(templates.tempNetcoolAlert, {countEvents: data.rowset.rows});
+    var htmlUnavNode = ejs.render(templates.tempUnavailableNode, {unavailableNode: data.rowset.rows});
+
     $('.netcool').html(html);
     $('.unavailable').html(htmlUnavNode);
   })

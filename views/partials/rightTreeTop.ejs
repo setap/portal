@@ -2,14 +2,8 @@
     <h5>Netcool</h5>
     <ul class="nav nav-list">
         <ul class="nav nav-list">
-            <% var countDownDevices = 0; %>
-            <% for(var i = 0; i < netcool.rowset.rows.length; i++) { %>
-            <% if(netcool.rowset.rows[i].Summary.indexOf('Chasiss ping failed') != -1) { %>
-            <% countDownDevices++; %>
-            <% } %>
-            <% } %>
-            <li>Всего событий&nbsp;<span class="badge"><%= netcool.rowset.affectedRows %></span></li>
-            <li>Недоступных устройств&nbsp;<span class="badge badge-success"><%= countDownDevices %></span></li>
+            <li>Недоступных устройств&nbsp;<span class="badge badge-success"><%= netcool.rowset.rows.length %></span>
+            </li>
 
         </ul>
     </ul>

@@ -35,7 +35,7 @@
   "netcool": {
     "host": "10.30.1.16",
     "port": "8080",
-    "path": "/objectserver/restapi/alerts/status",
+    "path": "/objectserver/restapi/alerts/status?filter=RTFM%3D1",
     "login": "webgui",
     "password": "netcool"
   },
