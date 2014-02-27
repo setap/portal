@@ -3,7 +3,8 @@ var templates = {
   tempSnmpBandwidth: require('fs').readFileSync('./views/clientside/_tempSnmpBandwidth.ejs', 'utf-8'),
   tempNodeMap: require('fs').readFileSync('./views/clientside/_tempNodeMap.ejs', 'utf-8'),
   tempRegionMap: require('fs').readFileSync('./views/clientside/_tempRegionMap.ejs', 'utf-8'),
-  tempNetcoolAlert: require('fs').readFileSync('./views/clientside/_tempNetcoolAlert.ejs', 'utf-8')
+  tempNetcoolAlert: require('fs').readFileSync('./views/clientside/_tempNetcoolAlert.ejs', 'utf-8'),
+  tempUnavailableNode: require('fs').readFileSync('./views/clientside/_tempUnavailableNode.ejs', 'utf-8')
 
 };
 

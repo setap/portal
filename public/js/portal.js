@@ -20,6 +20,7 @@ $(function () {
 $('.region').on('click', function (e) {
   var html = ejs.render(templates.tempRegionMap, {node: this});
   $('.map').html(html);
+  d3.select('path#path3879').attr('transform', 'translate("100","0")');
 });
 
 // Переключение по городам
@@ -176,16 +177,19 @@ socket
   .on('netcool', function (data) {
     tNetcol = 0;
     var countDownDevices = 0;
+    var unavailableNode = [];
     data = JSON.parse(data);
     for (var i = 0; i < data.rowset.rows.length; i++) {
-
-      if (data.rowset.rows[i].Summary.indexOf('Chasiss ping failed') != -1) {
+      if (data.rowset.rows[i].Summary.indexOf('Chassis Ping fail') != -1) {
         countDownDevices++;
+        unavailableNode.push(data.rowset.rows[i].NodeAlias)
         console.log(data.rowset.rows[i].Summary);
       }
     }
     var html = ejs.render(templates.tempNetcoolAlert, {countDownDevices: countDownDevices, countEvents: data.rowset.affectedRows});
+    var htmlUnavNode = ejs.render(templates.tempUnavailableNode, {unavailableNode: unavailableNode});
     $('.netcool').html(html);
+    $('.unavailable').html(htmlUnavNode);
   })
   .on('ncim', function (data) {
     tNCIM = 0;
@@ -199,10 +203,10 @@ socket
 
 
     for (var i = 0; i < data.serviceBaseDtos.length; i++) {
-      for (var j = 0; j < listChanelId.length; j++) {
+      for (var j = 0; j <= listChanelId.length; j++) {
         if (data.serviceBaseDtos[i].id == listChanelId[j]) {
-          console.log(data.serviceBaseDtos[i].name);
-          $("#" + listChanelId[j]).myAddClass("selected");
+          console.log(listChanelId[j]);
+          $("#" + listChanelId[j]).myAddClass(data.serviceBaseDtos[i].currentServiceStatus);
 
         }
       }
