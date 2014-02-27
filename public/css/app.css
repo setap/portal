@@ -142,3 +142,7 @@ h6, h5 {
 div.map {
     text-align: center;
 }
+
+.hide {
+    display: none;
+}

@@ -18,14 +18,24 @@ $(function () {
 // Переключение карт по регионам
 
 $('.region').on('click', function (e) {
+  $('.map').removeClass("hide");
+  $('.russia').addClass('hide');
   var html = ejs.render(templates.tempRegionMap, {node: this});
   $('.map').html(html);
-  d3.select('path#path3879').attr('transform', 'translate("100","0")');
+});
+
+// При нажатии на банер, переходим на основную карту
+
+$('.brand').on('click', function (e) {
+  $('.map').addClass('hide');
+  $('.russia').removeClass("hide");
 });
 
 // Переключение по городам
 
 $('.location').on('click', function (e) {
+  $('.map').removeClass("hide");
+  $('.russia').addClass('hide');
   var html = ejs.render(templates.tempNodeMap, {node: this});
   $('.map').html(html);
 });
@@ -50,16 +60,29 @@ jQuery.fn.myRemoveClass = function (classTitle) {
   });
 }
 
+$('path.map-region').on('click', function (e) {
+  $('.map').removeClass("hide");
+  $('.russia').addClass('hide');
+  var node = {
+    text: this.id
+  };
+  var html = ejs.render(templates.tempRegionMap, {node: node});
+  $('.map').html(html);
+});
+
 //После полной загрузки DOM начинаем работу с SVG картой
 
-$(window).load(function () {
+/*$(window).load(function () {
 
-  var svg = document.getElementById('imap');
+ var svg = document.getElementById('imap');
   if ('contentDocument' in svg) {
     var svgdom = svg.contentDocument;
   }
 
-  $(svgdom.getElementsByClassName("region")).hover(
+
+
+
+ $(svgdom.getElementsByClassName("region")).hover(
     function () {
       var id = $(this).attr("id");
       $("#" + id, svgdom).myAddClass("highlight");
@@ -95,7 +118,7 @@ $(window).load(function () {
     }
 
   })
-})
+ })*/
 
 // Всплывающее окно при наведении на СЭ
 
@@ -137,7 +160,7 @@ $('.device').popover(
 
 $('.device').click(function () {
   var strUrl = "/info", response = "";
-  console.log('click');
+
   jQuery.ajax({
     url: strUrl,
     data: {"device": this.text},
@@ -150,6 +173,8 @@ $('.device').click(function () {
   var snmpOutBandwidth = JSON.parse(response.DATA);
 
   var html = ejs.render(templates.tempSnmpBandwidth, {snmpOutBandwidth: snmpOutBandwidth, node: this});
+  $('.russia').addClass('hide');
+  $('.map').removeClass('hide');
   $('.map').html(html);
 });
 
@@ -180,9 +205,6 @@ socket
 
     data = JSON.parse(data);
 
-
-    console.log(data.rowset.rows);
-
     var html = ejs.render(templates.tempNetcoolAlert, {countEvents: data.rowset.rows});
     var htmlUnavNode = ejs.render(templates.tempUnavailableNode, {unavailableNode: data.rowset.rows});
 
@@ -194,6 +216,7 @@ socket
   })
   .on('wisla', function (data) {
     tWisla = 0;
+
     var listChanelId = [];
     $('path.chanel').each(function () {
       listChanelId.push(this.id);
@@ -203,7 +226,6 @@ socket
     for (var i = 0; i < data.serviceBaseDtos.length; i++) {
       for (var j = 0; j <= listChanelId.length; j++) {
         if (data.serviceBaseDtos[i].id == listChanelId[j]) {
-          console.log(listChanelId[j]);
           $("#" + listChanelId[j]).myAddClass(data.serviceBaseDtos[i].currentServiceStatus);
 
         }
