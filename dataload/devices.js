@@ -22,6 +22,7 @@ exports.getDevices = function (io) {
           log.error("Error execute to db:", err);
 
         }
+        console.log(results.returnParam);
         results = JSON.parse(results.returnParam);
 
         for (var i = 0; i < results.device.length; i++) {
@@ -63,7 +64,8 @@ exports.getDevicesStart = function () {
         if (err) {
           console.log("Error executing query:", err);
         }
-
+        //results.returnParam+="]}]}]}"
+        //console.log(results.returnParam);
         results = JSON.parse(results.returnParam);
 
         for (var i = 0; i < results.device.length; i++) {
@@ -76,7 +78,7 @@ exports.getDevicesStart = function () {
 
               for (var k = 0; k < results.device[i].area[j].l.length; k++) {
                 results.device[i].area[j].l[k].n = translite(results.device[i].area[j].l[k].n)
-//                console.log(results.device[i].area[j].l[k].n);
+                //console.log(results);
               }
             }
           }

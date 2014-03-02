@@ -21,5 +21,9 @@ module.exports = function (app) {
 
   app.get('/info', require('./info').get);
 
+  app.get('/unavailableNode', require('./unavailableNode').get);
+
+  app.get('/unavailableChanel', require('./unavailableChanel').get);
+
   //    app.get('/device/:id', require('./deviceid').get);
 }

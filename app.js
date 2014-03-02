@@ -4,7 +4,7 @@ var log = require('lib/log')(module);
 var serverDomain = domain.create();
 
 serverDomain.on('error', function () {
-  log.error('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+  log.error('Main error handler ' + err);
 });
 
 serverDomain.run(function () {

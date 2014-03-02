@@ -178,6 +178,50 @@ $('.device').click(function () {
   $('.map').html(html);
 });
 
+$('a.unavailable').click(function () {
+
+  var strUrl = "/unavailableNode", response = "", node = null;
+  jQuery.ajax({
+    url: strUrl,
+    data: {"data": this.text},
+    success: function (data) {
+      node = data;
+      //console.log(response);
+    },
+    async: false
+  });
+
+  //var node = JSON.parse(response);
+  //console.log(node);
+  var html = ejs.render(templates.tempUnavailableNodeDetail, {node: node});
+  $('.russia').addClass('hide');
+  $('.map').removeClass('hide');
+  $('.map').html(html);
+
+});
+
+$('a.wisla').click(function () {
+
+  var strUrl = "/unavailableChanel", response = "", chanel = null;
+  jQuery.ajax({
+    url: strUrl,
+    data: {"data": this.text},
+    success: function (data) {
+      chanel = data;
+      //console.log(response);
+    },
+    async: false
+  });
+
+  //var node = JSON.parse(response);
+  //console.log(chanel);
+  var html = ejs.render(templates.tempWislaChanelDetail, {chanel: chanel});
+  $('.russia').addClass('hide');
+  $('.map').removeClass('hide');
+  $('.map').html(html);
+
+});
+
 var socket = io.connect('', {
   reconnect: false
 });
@@ -210,6 +254,30 @@ socket
 
     $('.netcool').html(html);
     $('.unavailable').html(htmlUnavNode);
+
+    $('a.unavailable').click(function () {
+
+      var strUrl = "/unavailableNode", response = "", node = null;
+      jQuery.ajax({
+        url: strUrl,
+        data: {"data": this.text},
+        success: function (data) {
+          node = data;
+          //console.log(response);
+        },
+        async: false
+      });
+
+      //var node = JSON.parse(response);
+      //console.log(node);
+      var html = ejs.render(templates.tempUnavailableNodeDetail, {node: node});
+      $('.russia').addClass('hide');
+      $('.map').removeClass('hide');
+      $('.map').html(html);
+
+    });
+
+
   })
   .on('ncim', function (data) {
     tNCIM = 0;
@@ -217,7 +285,7 @@ socket
   .on('wisla', function (data) {
     tWisla = 0;
 
-    var listChanelId = [];
+    var listChanelId = [], listChanel = [];
     $('path.chanel').each(function () {
       listChanelId.push(this.id);
     });
@@ -227,10 +295,38 @@ socket
       for (var j = 0; j <= listChanelId.length; j++) {
         if (data.serviceBaseDtos[i].id == listChanelId[j]) {
           $("#" + listChanelId[j]).myAddClass(data.serviceBaseDtos[i].currentServiceStatus);
-
         }
       }
+      if (data.serviceBaseDtos[i].currentServiceStatus == 'RED') {
+        listChanel.push(data.serviceBaseDtos[i].name);
+        //console.log(listChanel);
+      }
     }
+
+    var htmlListChanel = ejs.render(templates.tempWislaChanel, {listChanel: listChanel});
+    $('div.sla').html(htmlListChanel);
+
+    $('a.wisla').click(function () {
+
+      var strUrl = "/unavailableChanel", response = "", chanel = null;
+      jQuery.ajax({
+        url: strUrl,
+        data: {"data": this.text},
+        success: function (data) {
+          chanel = data;
+          //console.log(response);
+        },
+        async: false
+      });
+
+      //var node = JSON.parse(response);
+      //console.log(chanel);
+      var html = ejs.render(templates.tempWislaChanelDetail, {chanel: chanel});
+      $('.russia').addClass('hide');
+      $('.map').removeClass('hide');
+      $('.map').html(html);
+
+    });
   })
   .on('devices', function (data) {
     for (var i = 0; i < data.device.length; i++) {
