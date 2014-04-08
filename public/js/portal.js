@@ -213,9 +213,7 @@ $('a.wisla').click(function () {
     async: false
   });
 
-  //var node = JSON.parse(response);
-  //console.log(chanel);
-  var html = ejs.render(templates.tempWislaChanelDetail, {chanel: chanel});
+  var html = ejs.render(templates.tempWislaChanelDetail, {chanels: chanel});
   $('.russia').addClass('hide');
   $('.map').removeClass('hide');
   $('.map').html(html);
@@ -321,7 +319,7 @@ socket
 
       //var node = JSON.parse(response);
       //console.log(chanel);
-      var html = ejs.render(templates.tempWislaChanelDetail, {chanel: chanel});
+      var html = ejs.render(templates.tempWislaChanelDetail, {chanels: chanel});
       $('.russia').addClass('hide');
       $('.map').removeClass('hide');
       $('.map').html(html);

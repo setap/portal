@@ -25,5 +25,7 @@ module.exports = function (app) {
 
   app.get('/unavailableChanel', require('./unavailableChanel').get);
 
+  app.get('/wislachanel', require('./wislaChanel').get);
+
   //    app.get('/device/:id', require('./deviceid').get);
 }

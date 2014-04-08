@@ -7,9 +7,19 @@
     </tr>
     </thead>
     <% for(var key in chanel) { %>
+
     <tr>
         <td><%= key %></td>
         <td><%= chanel[key] %></td>
     </tr>
+
+    <% if((chanel[key] instanceof Array) || (chanel[key] instanceof Object)) { %>
+    <% for(var p in chanel[key][0]) { %>
+    <tr>
+        <td><%= p %></td>
+        <td><%= chanel[key][0][p] %></td>
+    </tr>
+    <% } %>
+    <% } %>
     <% } %>
 </table>
