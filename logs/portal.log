@@ -1,0 +1,1420 @@
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+[90mGET /portal [36m304 [90m373ms[0m
+[90mGET /vendor/bower_components/bootstrap/dist/css/bootstrap.css [36m304 [90m44ms[0m
+[90mGET /css/app.css [36m304 [90m44ms[0m
+[90mGET /vendor/bower_components/bootstrap/dist/css/bootstrap-responsive.css [36m304 [90m53ms[0m
+[90mGET /vendor/bower_components/jquery/jquery.min.js [36m304 [90m53ms[0m
+[90mGET /vendor/bower_components/bootstrap/dist/js/bootstrap.js [36m304 [90m51ms[0m
+[90mGET /js/ejs.js [36m304 [90m54ms[0m
+[90mGET /vendor/bower_components/socket.io-client/dist/socket.io.js [36m304 [90m32ms[0m
+[90mGET /vendor/bower_components/bootstrap/dist/img/glyphicons-halflings.png [36m304 [90m73ms[0m
+[90mGET /js/portal.js [36m304 [90m76ms[0m
+[90mGET /ping?device=SW-3560.KURSK.FSONET [32m200 [90m54ms - 2.82kb[0m
+[90mGET /ping?device=SW-3560.KURSK.FSONET [36m304 [90m24ms[0m
+[90mGET /ping?device=SW-3560.KURSK.FSONET [32m200 [90m109ms - 2.82kb[0m
+[90mGET /ping?device=SW-3560.KURSK.FSONET [36m304 [90m120ms[0m
+[90mGET /ping?device=SW-3560.KURSK.FSONET [36m304 [90m76ms[0m
+[90mGET /ping?device=SW-3560.KURSK.FSONET [36m304 [90m113ms[0m
+[90mGET /ping?device=RT-3945.KURSK.FSONET [32m200 [90m71ms - 92b[0m
+[90mGET /ping?device=RT-3945.KURSK.FSONET [36m304 [90m102ms[0m
+[90mGET /ping?device=SW-2960.KURSK.FSONET [32m200 [90m65ms[0m
+[90mGET /ping?device=SW-2960.KURSK.FSONET [32m200 [90m111ms[0m
+[90mGET /ping?device=SW-3560.KURSK.FSONET [36m304 [90m65ms[0m
+[90mGET /ping?device=SW-3560.KURSK.FSONET [36m304 [90m104ms[0m
+[90mGET /ping?device=SW-3560.KURSK.FSONET [36m304 [90m64ms[0m
+[90mGET /ping?device=SW-3560.KURSK.FSONET [36m304 [90m109ms[0m
+[90mGET /ping?device=SW-3560.KURSK.FSONET [36m304 [90m69ms[0m
+[90mGET /ping?device=SW-3560.KURSK.FSONET [36m304 [90m99ms[0m
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 1 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 2 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 3 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+[90mGET /portal [32m200 [90m405ms - 314.1kb[0m
+[90mGET /vendor/bower_components/bootstrap/dist/css/bootstrap.css [36m304 [90m47ms[0m
+[90mGET /css/app.css [36m304 [90m46ms[0m
+[90mGET /vendor/bower_components/bootstrap/dist/css/bootstrap-responsive.css [36m304 [90m45ms[0m
+[90mGET /vendor/bower_components/jquery/jquery.min.js [36m304 [90m59ms[0m
+[90mGET /vendor/bower_components/bootstrap/dist/js/bootstrap.js [36m304 [90m58ms[0m
+[90mGET /js/ejs.js [36m304 [90m58ms[0m
+[90mGET /vendor/bower_components/socket.io-client/dist/socket.io.js [36m304 [90m87ms[0m
+[90mGET /vendor/bower_components/bootstrap/dist/img/glyphicons-halflings.png [36m304 [90m36ms[0m
+[90mGET /js/portal.js [36m304 [90m33ms[0m
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 4 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 5 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 6 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 7 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 8 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 9 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 10 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 11 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 12 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 13 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 14 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 15 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 16 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 17 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 18 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+[90mGET /portal [32m200 [90m419ms - 313.99kb[0m
+[90mGET /vendor/bower_components/bootstrap/dist/css/bootstrap.css [36m304 [90m25ms[0m
+[90mGET /css/app.css [36m304 [90m34ms[0m
+[90mGET /vendor/bower_components/bootstrap/dist/css/bootstrap-responsive.css [36m304 [90m34ms[0m
+[90mGET /vendor/bower_components/jquery/jquery.min.js [36m304 [90m33ms[0m
+[90mGET /vendor/bower_components/bootstrap/dist/js/bootstrap.js [36m304 [90m37ms[0m
+[90mGET /js/ejs.js [36m304 [90m36ms[0m
+[90mGET /vendor/bower_components/socket.io-client/dist/socket.io.js [36m304 [90m79ms[0m
+[90mGET /vendor/bower_components/bootstrap/dist/img/glyphicons-halflings.png [36m304 [90m61ms[0m
+[90mGET /js/portal.js [36m304 [90m107ms[0m
+Got error: connect ENETDOWN
+[31merror[39m: [socket/index.js] !!!!!!!!!!!!!!!!!!!!!!!!!!!!!Error: connect ENETDOWN
+[31merror[39m: [socket/index.js] !!!!!!!!!!!!!!!!!!!!!!!!!!!!!Error: connect ETIMEDOUT
+Got error: connect ETIMEDOUT
+libc++abi.dylib: terminating with uncaught exception of type oracle::occi::SQLException: ORA-12560: TNS:protocol adapter error
+
+libc++abi.dylib: terminating with uncaught exception of type oracle::occi::SQLException: ORA-12560: TNS:protocol adapter error
+
+libc++abi.dylib: terminating with uncaught exception of type oracle::occi::SQLException: ORA-12170: TNS:Connect timeout occurred
+
+libc++abi.dylib: terminating with uncaught exception of type oracle::occi::SQLException: ORA-12170: TNS:Connect timeout occurred
+
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/connection/server.js:553:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/connection/connection.js:512:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script was killed by signal: SIGABRT
+error: Forever restarting script for 19 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+[90mGET /portal [36m304 [90m437ms[0m
+[90mGET /vendor/bower_components/bootstrap/dist/css/bootstrap.css [36m304 [90m23ms[0m
+[90mGET /css/app.css [36m304 [90m25ms[0m
+[90mGET /vendor/bower_components/bootstrap/dist/css/bootstrap-responsive.css [36m304 [90m25ms[0m
+[90mGET /vendor/bower_components/jquery/jquery.min.js [36m304 [90m26ms[0m
+[90mGET /vendor/bower_components/bootstrap/dist/js/bootstrap.js [36m304 [90m25ms[0m
+[90mGET /js/ejs.js [36m304 [90m26ms[0m
+[90mGET /vendor/bower_components/socket.io-client/dist/socket.io.js [36m304 [90m66ms[0m
+[90mGET /vendor/bower_components/bootstrap/dist/img/glyphicons-halflings.png [36m304 [90m66ms[0m
+[90mGET /js/portal.js [36m304 [90m108ms[0m
+[90mGET /portal [36m304 [90m75ms[0m
+[90mGET /vendor/bower_components/bootstrap/dist/css/bootstrap.css [36m304 [90m36ms[0m
+[90mGET /css/app.css [36m304 [90m40ms[0m
+[90mGET /vendor/bower_components/bootstrap/dist/css/bootstrap-responsive.css [36m304 [90m38ms[0m
+[90mGET /vendor/bower_components/jquery/jquery.min.js [36m304 [90m35ms[0m
+[90mGET /vendor/bower_components/bootstrap/dist/js/bootstrap.js [36m304 [90m38ms[0m
+[90mGET /js/ejs.js [36m304 [90m37ms[0m
+[90mGET /vendor/bower_components/socket.io-client/dist/socket.io.js [36m304 [90m67ms[0m
+[90mGET /vendor/bower_components/bootstrap/dist/img/glyphicons-halflings.png [36m304 [90m61ms[0m
+[90mGET /js/portal.js [36m304 [90m63ms[0m
+[90mGET /portal [36m304 [90m73ms[0m
+[90mGET /vendor/bower_components/bootstrap/dist/css/bootstrap.css [36m304 [90m41ms[0m
+[90mGET /css/app.css [36m304 [90m41ms[0m
+[90mGET /vendor/bower_components/bootstrap/dist/css/bootstrap-responsive.css [36m304 [90m41ms[0m
+[90mGET /vendor/bower_components/jquery/jquery.min.js [36m304 [90m45ms[0m
+[90mGET /vendor/bower_components/bootstrap/dist/js/bootstrap.js [36m304 [90m44ms[0m
+[90mGET /js/ejs.js [36m304 [90m44ms[0m
+[90mGET /vendor/bower_components/socket.io-client/dist/socket.io.js [36m304 [90m65ms[0m
+[90mGET /vendor/bower_components/bootstrap/dist/img/glyphicons-halflings.png [36m304 [90m61ms[0m
+[90mGET /js/portal.js [36m304 [90m99ms[0m
+[90mGET /images/region/%D0%A3%D0%A4%D0%9E.svg [32m200 [90m61ms - 24.99kb[0m
+[90mGET /images/region/%D0%9F%D0%A4%D0%9E.svg [32m200 [90m59ms - 21.41kb[0m
+[90mGET /images/region/%D0%AE%D0%A4%D0%9E.svg [32m200 [90m67ms - 19.95kb[0m
+libc++abi.dylib: terminating with uncaught exception of type oracle::occi::SQLException: ORA-12170: TNS:Connect timeout occurred
+
+libc++abi.dylib: terminating with uncaught exception of type oracle::occi::SQLException: ORA-12170: TNS:Connect timeout occurred
+
+[31merror[39m: [socket/index.js] !!!!!!!!!!!!!!!!!!!!!!!!!!!!!Error: connect ETIMEDOUT
+Got error: connect ETIMEDOUT
+libc++abi.dylib: terminating with uncaught exception of type oracle::occi::SQLException: ORA-12170: TNS:Connect timeout occurred
+
+error: Forever detected script was killed by signal: SIGABRT
+error: Forever restarting script for 20 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 21 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 22 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 23 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 24 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 25 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 26 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 27 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 28 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 29 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 30 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 31 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 32 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 33 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 34 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 35 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 36 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 37 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 38 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 39 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 40 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 41 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 42 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 43 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 44 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 45 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 46 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 47 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 48 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 49 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 50 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 51 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 52 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 53 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 54 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 55 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 56 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 57 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 58 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 59 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 60 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 61 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 62 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 63 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 64 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 65 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 66 time
+ 
+info: socket.io started
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [10.30.1.21:27017]
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:540:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:140:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/Users/Stepan/Documents/PROJECTS/portal2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:478:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:441:14
+    at process._tickDomainCallback (node.js:459:13)
