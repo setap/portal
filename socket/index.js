@@ -6,7 +6,7 @@ var domain = require('domain');
 var d = domain.create();
 
 d.on('error', function (err) {
-  log.error('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!' + err);
+  log.error('Socket domain error handler ' + err);
 })
 
 module.exports = function (server) {
