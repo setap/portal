@@ -6,10 +6,10 @@ export NODE_PATH=.
 export NLS_LANG=.UTF8
 export DYLD_LIBRARY_PATH=/opt/instantclient
 
-cd /Users/Stepan/Documents/PROJECTS/portal2/
+cd /opt/portal
 
 case "$1" in
-start) exec forever -a -l ./logs/portal.log -o ./logs/portal_output.log -e ./logs/portal_errors.log --sourceDir=./ -p ./forever/ start app.js
+start) exec forever -a -l /opt/portal/logs/portal.log -o /opt/portal/logs/portal_output.log -e /opt/portal/logs/portal_errors.log --sourceDir=/opt/portal -p /opt/portal/forever/ start app.js
 ;;
 stop) exec forever --sourceDir=./ stop app.js;;
 *) echo "incorrect usage"
