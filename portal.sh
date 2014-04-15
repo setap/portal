@@ -10,7 +10,7 @@ export PATH=$PATH:/opt/node/node-v0.10.25-linux-x64/bin:/opt/mongodb/mongodb-lin
 cd /opt/portal
 
 case "$1" in
-start) exec forever -m -a -l /opt/portal/logs/portal.log -o /opt/portal/logs/portal_output.log -e /opt/portal/logs/portal_errors.log --sourceDir=/opt/portal -p /opt/portal/forever/ start app.js
+start) exec forever -a -l /opt/portal/logs/portal.log -o /opt/portal/logs/portal_output.log -e /opt/portal/logs/portal_errors.log --sourceDir=/opt/portal -p /opt/portal/forever/  -m 100 app.js
 ;;
 stop) exec forever --sourceDir=./ stop app.js;;
 *) echo "incorrect usage"
