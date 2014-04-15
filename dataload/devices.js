@@ -62,10 +62,10 @@ exports.getDevicesStart = function () {
     connection.execute("call json_devices_v2(:1)",
       [new oracle.OutParam(oracle.OCCICLOB)], function (err, results) {
         if (err) {
-          console.log("Error executing query:", err);
+          log.error("Error executing query:", err);
         }
         //results.returnParam+="]}]}]}"
-        //console.log(results.returnParam);
+        console.log(results);
         results = JSON.parse(results.returnParam);
 
         for (var i = 0; i < results.device.length; i++) {
