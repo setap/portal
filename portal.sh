@@ -18,6 +18,6 @@ exit 1
 ;;
 esac
 
-echo "Portal start"
+echo "Portal start..."
 
 exit 0
