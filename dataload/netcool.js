@@ -23,7 +23,7 @@ exports.getNetcoolData = function (io) {
     });
 
   }).on('error', function (e) {
-      console.log("Got error: " + e.message);
+      console.log("Got error while load netcoll data: " + e.message);
     });
 
 };
@@ -43,7 +43,7 @@ exports.getNetcoolDataStart = function () {
     })
 
   }).on('error', function (e) {
-      console.log("Got error: " + e.message);
+      console.log("Got error while load netcoll data: " + e.message);
     });
 
 

@@ -11,6 +11,8 @@ module.exports = function (app) {
 
   app.post('/logout', require('./logout').post);
 
+  app.post('/incident', require('./incident').post);
+
   app.get('/settings', checkAdmin, require('./settings').get);
 
   app.get('/session', require('./session').get);

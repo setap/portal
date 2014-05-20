@@ -22,7 +22,7 @@ exports.getDevices = function (io) {
           log.error("Error execute to db:", err);
 
         }
-        console.log(results.returnParam);
+//        console.log(results.returnParam);
         results = JSON.parse(results.returnParam);
 
         for (var i = 0; i < results.device.length; i++) {
@@ -65,7 +65,7 @@ exports.getDevicesStart = function () {
           log.error("Error executing query:", err);
         }
         //results.returnParam+="]}]}]}"
-        console.log(results);
+        //console.log(results);
         results = JSON.parse(results.returnParam);
 
         for (var i = 0; i < results.device.length; i++) {

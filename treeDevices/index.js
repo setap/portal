@@ -1,10 +1,3 @@
-var oracle = require('oracle');
-var config = require('config');
-var log = require('lib/log')(module);
-var http = require('http');
-var translite = require('lib/translite');
-var formatDate = require('lib/formatDate');
-
 global.treeDevices = null;
 global.incidents = null;
 global.ncim_metrics = null;
@@ -15,7 +8,7 @@ module.exports = function () {
 
   require('dataload/devices').getDevicesStart();
 
-  require('dataload/incidents').getIncidentsStart();
+  require('dataload/incidents').getIncidents();
 
   require('dataload/ncim').getNCIMDataStart();
 

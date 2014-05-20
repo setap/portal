@@ -5,7 +5,12 @@
         <div class="span3">
 
             <%- partial('partials/newTree') %>
+
+            <% if(netcoolAlert){ %>
             <%- partial('partials/leftTreeTop2') %>
+            <% } else { %>
+            <%- partial('partials/errorPortlet') %>
+            <% } %>
 
         </div>
         <div class="span7">
@@ -23,7 +28,11 @@
         </div>
         <div class="span2">
 
+            <% if(netcoolAlert){ %>
             <%- partial('partials/rightTreeTop') %>
+            <% } else { %>
+            <%- partial('partials/errorPortlet') %>
+            <% } %>
 
             <%- partial('partials/rightTreeTop2') %>
 

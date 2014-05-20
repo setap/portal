@@ -4,6 +4,7 @@ var log = require('lib/log')(module);
 var config = require('config');
 var translite = require('lib/translite');
 var formatDate = require('lib/formatDate');
+var genericPool = require('generic-pool');
 
 
 exports.getNCIMData = function (io) {
@@ -14,7 +15,8 @@ exports.getNCIMData = function (io) {
     log.debug('Start load NCIM data');
     connection.execute(config.get("nameOfQuery:ping_time"), [], function (err, results) {
       if (err) {
-        log.debug("Error executing query:" + err);
+        log.debug("Error executing NCIM data:" + err);
+        connection.close();
       }
       log.debug('Load NCIM data......');
       ncim_metrics = results;
@@ -34,7 +36,8 @@ exports.getNCIMDataStart = function () {
 
     connection.execute(config.get("nameOfQuery:ping_time"), [], function (err, results) {
       if (err) {
-        console.log("Error executing query:", err);
+        console.log("Error executing ncim query:", err);
+        connection.close();
       }
 
       ncim_metrics = results;
