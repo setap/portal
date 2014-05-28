@@ -7,7 +7,8 @@ var templates = {
   tempUnavailableNode: require('fs').readFileSync('./views/clientside/_tempUnavailableNode.ejs', 'utf-8'),
   tempUnavailableNodeDetail: require('fs').readFileSync('./views/clientside/_tempUnavailableNodeDetail.ejs', 'utf-8'),
   tempWislaChanel: require('fs').readFileSync('./views/clientside/_tempWislaChanel.ejs', 'utf-8'),
-  tempWislaChanelDetail: require('fs').readFileSync('./views/clientside/_tempWislaChanelDetail.ejs', 'utf-8')
+  tempWislaChanelDetail: require('fs').readFileSync('./views/clientside/_tempWislaChanelDetail.ejs', 'utf-8'),
+  tempTickets: require('fs').readFileSync('./views/clientside/_tempTickets.ejs', 'utf-8')
 
 };
 

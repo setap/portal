@@ -1,0 +1,28 @@
+<table class="table table-striped table-condensed">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Номер</th>
+        <th>Описание</th>
+        <th>Приоритет</th>
+    </tr>
+    </thead>
+    <% for(var i in data.stack) { %>
+    <tr>
+        <td><%= i %></td>
+        <td>
+            <a href="https://10.30.1.18/maximo/ui/maximo.jsp?event=loadapp&amp;value=incident&amp;additionalevent=sqlwhere&amp;additionaleventvalue=TICKETID%3D'4991'"
+               target="_blank"><%= data.stack[i].ticketid %></a></td>
+        <% if (data.stack[i].event == "reginc") { %>
+        <td><%= "Пользователь " + data.stack[i].owner + " завел инцидент \"" + data.stack[i].desc + "\"" %></td>
+        <% } %>
+        <% if (data.stack[i].event == "regsr") { %>
+        <td><%= "Пользователь " + data.stack[i].owner + " завел сеанс связи \"" + data.stack[i].desc + "\"" %></td>
+        <% } %>
+        <% if (data.stack[i].event == "agrsr") { %>
+        <td><%= data.stack[i].owner + " утвердил указание \"" + data.stack[i].desc + "\"" %></td>
+        <% } %>
+        <td><%= data.stack[i].priority %></td>
+    </tr>
+    <% } %>
+</table>

@@ -241,6 +241,11 @@ setInterval(function () {
 }, 700);
 
 socket
+  .on('newticket', function (data) {
+    console.dir(data.stack);
+    var html = ejs.render(templates.tempTickets, {data: data});
+    $('.smartcloud').html(html);
+  })
   .on('netcool', function (data) {
 
     tNetcol = 0;

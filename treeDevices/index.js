@@ -3,6 +3,7 @@ global.incidents = null;
 global.ncim_metrics = null;
 global.netcoolAlert = null;
 global.dataFromWisla = null;
+global.tickets = null;
 
 module.exports = function () {
 
